@@ -51,14 +51,19 @@ ThemeData getApplicationTheme() {
       ),
     ),
 
+    applyElevationOverlayColor: false,
+
     // elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
-        style: ElevatedButton.styleFrom(
-            textStyle: getRegularStyle(color: AppColors.white),
-            primary: AppColors.green,
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(12.0),
-            ))),
+      style: ElevatedButton.styleFrom(
+        textStyle: getSemiBoldStyle(color: AppColors.white),
+        primary: AppColors.green,
+        fixedSize: const Size(335.0, 48.0),
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(8.0),
+        ),
+      ),
+    ),
 
     // Text theme
     textTheme: TextTheme(

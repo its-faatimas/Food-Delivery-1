@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:foodly/core/styles/app_theme.dart';
 import 'package:foodly/screens/home/home_page.dart';
 import 'package:foodly/screens/on_boarding/on_boarding_page.dart';
 
@@ -21,9 +22,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Food',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
-      ),
+      theme: getApplicationTheme(),
       home: const OnBoardingPage(),
     );
   }

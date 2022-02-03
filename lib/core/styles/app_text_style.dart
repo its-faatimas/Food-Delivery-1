@@ -22,7 +22,7 @@ TextStyle getRegularStyle({double fontSize = 14.0, required Color color}) {
 }
 // light text style
 
-TextStyle getLightStyle({double fontSize = 12.0, required Color color}) {
+TextStyle getLightStyle({double fontSize = 14.0, required Color color}) {
   return _getTextStyle(fontSize, 'Sf-Pro', FontWeight.w300, color);
 }
 // bold text style
@@ -33,19 +33,19 @@ TextStyle getBoldStyle({double fontSize = 12.0, Color color = AppColors.dark}) {
 // extra bold text style
 
 TextStyle getExtraBoldStyle(
-    {double fontSize = 12.0, Color color = AppColors.dark}) {
+    {double fontSize = 14.0, Color color = AppColors.dark}) {
   return _getTextStyle(fontSize, 'SF-Pro', FontWeight.w800, color);
 }
 
 // semi bold text style
 
 TextStyle getSemiBoldStyle(
-    {double fontSize = 12.0, Color color = AppColors.dark}) {
+    {double fontSize = 14.0, Color color = AppColors.dark}) {
   return _getTextStyle(fontSize, 'SF-Pro', FontWeight.w600, color);
 }
 
 // medium text style
 
-TextStyle getMediumStyle({double fontSize = 12.0, required Color color}) {
+TextStyle getMediumStyle({double fontSize = 14.0, required Color color}) {
   return _getTextStyle(fontSize, 'SF-Pro', FontWeight.w500, color);
 }
