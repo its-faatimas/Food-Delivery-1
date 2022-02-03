@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:foodly/core/components/custom_navigator.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/on_boardin_data.dart';
 import 'package:foodly/cubit/onboarding/on_boarding_cubit.dart';
-import 'package:foodly/widgets/my_sized_box.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    CustomNavigator().init(context);
     SizeConfig().init(context);
     return BlocProvider(
       create: (_) => OnBoardingCubit(),
@@ -44,7 +43,7 @@ class OnBoardingPage extends StatelessWidget {
                 PageIndicator(len: 3, currentIndex: cubit.currentIndex),
                 MySizedBox(height: 60.0),
                 PrimaryButton(
-                  onPressed: () {},
+                  onPressed: _onButtonPressed,
                   label: 'GET STARTED',
                 ),
               ],
@@ -73,5 +72,9 @@ class OnBoardingPage extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  void _onButtonPressed() {
+    navigatorPushReplacement(HomePage());
   }
 }

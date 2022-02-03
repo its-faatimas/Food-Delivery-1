@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/styles/app_theme.dart';
-import 'package:foodly/screens/home/home_page.dart';
-import 'package:foodly/screens/on_boarding/on_boarding_page.dart';
+import 'package:foodly/screens/on_boarding/splash_screen_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +22,7 @@ class MyApp extends StatelessWidget {
       title: 'Food',
       debugShowCheckedModeBanner: false,
       theme: getApplicationTheme(),
-      home: const OnBoardingPage(),
+      home: const SplashScreenPage(),
     );
   }
 }

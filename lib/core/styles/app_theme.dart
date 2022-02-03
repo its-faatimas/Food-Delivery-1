@@ -56,6 +56,7 @@ ThemeData getApplicationTheme() {
     // elevated button theme
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
+        elevation: 0.0,
         textStyle: getSemiBoldStyle(color: AppColors.white),
         primary: AppColors.green,
         fixedSize: const Size(335.0, 48.0),
