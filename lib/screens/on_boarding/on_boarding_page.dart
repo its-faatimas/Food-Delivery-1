@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
 class OnBoardingPage extends StatelessWidget {
@@ -7,9 +8,16 @@ class OnBoardingPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     SizeConfig().init(context);
-    return const Scaffold(
-      body: Center(
-        child: PageIndicator(len: 3, currentIndex: 1),
+    return Scaffold(
+      body: Stack(
+        children: [
+          PageView(
+            children: [
+
+            ],
+          ),
+
+        ],
       ),
     );
   }
