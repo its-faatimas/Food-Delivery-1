@@ -7,6 +7,7 @@ class MyText extends StatelessWidget {
   double size;
   int? lines;
   TextAlign? align;
+  FontWeight? weight;
 
   MyText(
     this.text, {
@@ -15,6 +16,7 @@ class MyText extends StatelessWidget {
     this.size = 14.0,
     this.lines,
     this.align,
+    this.weight,
   }) : super(key: key);
 
   @override
@@ -26,6 +28,7 @@ class MyText extends StatelessWidget {
       style: TextStyle(
         fontSize: getWidth(size),
         color: color,
+        fontWeight: weight,
       ),
     );
   }

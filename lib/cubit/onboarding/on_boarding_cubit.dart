@@ -8,7 +8,6 @@ class OnBoardingCubit extends Cubit<OnBoardingState> {
   int _currentIndex = 0;
   final PageController _pageController = PageController();
 
-
   void onChanged(int index) {
     _currentIndex = index;
     emit(OnBoardingInitial());
