@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly/core/components/size_config.dart';
-import 'package:foodly/core/constants/app_colors.dart';
+import 'package:foodly/core/components/exporting_packages.dart';
 
 class PageIndicator extends StatelessWidget {
   final int len;
@@ -24,7 +23,7 @@ class PageIndicator extends StatelessWidget {
         duration: const Duration(milliseconds: 300),
         height: getHeight(5.0),
         width: getWidth(8.0),
-        decoration: BoxDecoration(
+        decoration: MyDecoration.circular(
           color: currentIndex == index ? AppColors.green : AppColors.grey,
         ),
       );

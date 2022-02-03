@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:foodly/core/components/size_config.dart';
-import 'package:foodly/widgets/page_indicator.dart';
+import 'package:foodly/core/components/exporting_packages.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
