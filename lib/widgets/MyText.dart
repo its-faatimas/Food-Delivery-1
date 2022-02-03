@@ -8,10 +8,9 @@ class MyText extends StatelessWidget {
   int? lines;
   TextAlign? align;
 
-
-  MyText({
+  MyText(
+    this.text, {
     Key? key,
-    required this.text,
     this.color = AppColors.dark,
     this.size = 14.0,
     this.lines,
@@ -27,7 +26,6 @@ class MyText extends StatelessWidget {
       style: TextStyle(
         fontSize: getWidth(size),
         color: color,
-
       ),
     );
   }
