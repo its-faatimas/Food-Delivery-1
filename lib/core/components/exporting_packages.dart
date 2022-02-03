@@ -5,6 +5,9 @@ export 'package:foodly/screens/home/home_page.dart';
 
 // Widgets
 export 'package:foodly/widgets/page_indicator.dart';
+export 'package:foodly/widgets/MyText.dart';
+export 'package:foodly/widgets/buttons/primary_button.dart';
+
 
 // Components
 export 'package:foodly/core/components/size_config.dart';
