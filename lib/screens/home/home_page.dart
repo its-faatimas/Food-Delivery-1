@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/cubit/home/home_page_cubit.dart';
+import 'package:foodly/widgets/buttons/my_outlined_button.dart';
 import 'package:foodly/widgets/buttons/social_media_button.dart';
 import 'package:foodly/widgets/my_app_bar.dart';
 
@@ -20,9 +21,8 @@ class HomePage extends StatelessWidget {
               // Child'ga Padding berdik
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
-                child: SocialMediaButton(
+                child: MyOutlinedButton(
                   onPressed: () {},
-                  assetIcon: AppIcons.facebook,
                   label: "Connect with Facebook".toUpperCase(),
                 ),
               ),
