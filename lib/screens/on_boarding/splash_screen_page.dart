@@ -16,7 +16,7 @@ class _SplashScreenPageState extends State<SplashScreenPage> {
   void initState() {
     super.initState();
     Timer(const Duration(seconds: 1), () {
-      navigatorPushReplacement(OnBoardingPage());
+      navigatorPushReplacement(const OnBoardingPage());
     });
   }
 

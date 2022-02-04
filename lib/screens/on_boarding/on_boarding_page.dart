@@ -75,6 +75,6 @@ class OnBoardingPage extends StatelessWidget {
   }
 
   void _onButtonPressed() {
-    navigatorPushReplacement(HomePage());
+    navigatorPushReplacement(const HomePage());
   }
 }
