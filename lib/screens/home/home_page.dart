@@ -13,6 +13,7 @@ class HomePage extends StatelessWidget {
       child: BlocBuilder<HomePageCubit, HomePageState>(
         builder: (context, state) {
           return Scaffold(
+            //app bar qo'shildi
             appBar: const MyAppBar(title: 'MyAppBar'),
             body: Center(
               // Child'ga Padding berdik
