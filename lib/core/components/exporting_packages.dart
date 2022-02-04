@@ -7,6 +7,7 @@ export 'package:foodly/widgets/page_indicator.dart';
 export 'package:foodly/widgets/MyText.dart';
 export 'package:foodly/widgets/buttons/primary_button.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
+export 'package:foodly/widgets/buttons/my_icon_button.dart';
 
 // Components
 export 'package:foodly/core/components/size_config.dart';
