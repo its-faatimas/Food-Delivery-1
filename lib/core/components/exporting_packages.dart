@@ -11,6 +11,7 @@ export 'package:foodly/widgets/my_sized_box.dart';
 // Components
 export 'package:foodly/core/components/size_config.dart';
 export 'package:foodly/core/components/my_box_decoration.dart';
+export 'package:foodly/core/components/my_edge_insets.dart';
 
 // Constants
 export 'package:foodly/core/constants/app_colors.dart';

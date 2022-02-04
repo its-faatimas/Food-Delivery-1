@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
 import 'app_text_style.dart';
@@ -81,7 +80,10 @@ ThemeData getApplicationTheme() {
     // input decoration theme (text form field)
 
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.all(8.0),
+      contentPadding: const EdgeInsets.symmetric(
+        horizontal: 20.0,
+        vertical: 21.0,
+      ),
       // hint style
       hintStyle: getRegularStyle(color: AppColors.grey),
 
@@ -91,15 +93,15 @@ ThemeData getApplicationTheme() {
       errorStyle: getRegularStyle(color: AppColors.grey),
 
       // enabled border
-      enabledBorder: _outlineInputBorder(AppColors.grey),
+      enabledBorder: _underlineInputBorder(AppColors.grey),
 
       // focused border
-      focusedBorder: _outlineInputBorder(AppColors.green),
+      focusedBorder: _underlineInputBorder(AppColors.green),
 
       // error border
-      errorBorder: _outlineInputBorder(AppColors.orange),
+      errorBorder: _underlineInputBorder(AppColors.orange),
       // focused error border
-      focusedErrorBorder: _outlineInputBorder(AppColors.green),
+      focusedErrorBorder: _underlineInputBorder(AppColors.green),
     ),
   );
 }
@@ -109,3 +111,7 @@ OutlineInputBorder _outlineInputBorder(Color color) {
       borderSide: BorderSide(color: color, width: 1.0),
       borderRadius: const BorderRadius.all(Radius.circular(8.0)));
 }
+
+UnderlineInputBorder _underlineInputBorder(Color color) => UnderlineInputBorder(
+      borderSide: BorderSide(color: color),
+    );
