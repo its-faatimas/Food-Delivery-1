@@ -45,7 +45,7 @@ ThemeData getApplicationTheme() {
         alignment: Alignment.centerLeft,
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
-          side: const BorderSide(color: AppColors.grey, width: 1),
+          side: const BorderSide(color: AppColors.green, width: 1),
         ),
       ),
     ),
