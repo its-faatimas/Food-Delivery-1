@@ -15,6 +15,7 @@ class HomePage extends StatelessWidget {
           return Scaffold(
             appBar: const MyAppBar(title: 'MyAppBar'),
             body: Center(
+              // Child'ga Padding berdik
               child: Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: MyIconButton(onPressed: () {}, assetIcon: AppIcons.food),
