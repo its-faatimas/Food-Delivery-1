@@ -80,28 +80,27 @@ ThemeData getApplicationTheme() {
     // input decoration theme (text form field)
 
     inputDecorationTheme: InputDecorationTheme(
-      contentPadding: const EdgeInsets.symmetric(
-        horizontal: 20.0,
-        vertical: 21.0,
-      ),
+      contentPadding:
+          const EdgeInsets.symmetric(horizontal: 20.0, vertical: 21.0),
+
       // hint style
-      hintStyle: getRegularStyle(color: AppColors.grey),
+      hintStyle: getRegularStyle(color: AppColors.darkGrey, fontSize: 16.0),
 
       // label style
       labelStyle: getMediumStyle(color: AppColors.darkGrey),
       // error style
-      errorStyle: getRegularStyle(color: AppColors.grey),
+      errorStyle: getRegularStyle(color: AppColors.orange),
 
       // enabled border
-      enabledBorder: _underlineInputBorder(AppColors.grey),
+      enabledBorder: _outlineInputBorder(AppColors.darkGrey),
 
       // focused border
-      focusedBorder: _underlineInputBorder(AppColors.green),
+      focusedBorder: _outlineInputBorder(AppColors.darkGrey),
 
       // error border
-      errorBorder: _underlineInputBorder(AppColors.orange),
+      errorBorder: _outlineInputBorder(AppColors.orange),
       // focused error border
-      focusedErrorBorder: _underlineInputBorder(AppColors.green),
+      focusedErrorBorder: _outlineInputBorder(AppColors.darkGrey),
     ),
   );
 }

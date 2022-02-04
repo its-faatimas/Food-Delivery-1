@@ -8,6 +8,8 @@ export 'package:foodly/widgets/MyText.dart';
 export 'package:foodly/widgets/buttons/primary_button.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
 export 'package:foodly/widgets/buttons/my_icon_button.dart';
+export 'package:foodly/widgets/my_app_bar.dart';
+export 'package:foodly/widgets/my_text_form_field.dart';
 
 // Components
 export 'package:foodly/core/components/size_config.dart';
