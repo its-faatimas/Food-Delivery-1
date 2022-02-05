@@ -2,5 +2,20 @@
   "hello": "Hello",
   "appName": "Foodly",
   "get_started": "Get Started",
-  "welcome": "Welcome"
+  "welcome": "Welcome",
+  "password": "Password",
+  "email": "Email",
+  "sign_in": "Sign In",
+  "sign_up": "Sign Up",
+  "name": "Name",
+  "forget_password": "Forget Password?",
+  "or": "Or",
+  "enter_your_phone_or_email_for_sign_in_or": "Enter your Phone number or Email for sign in. Or",
+  "create_new_account": "Create new account.",
+  "connect_with": "Connect with {}",
+  "forgot_password": "Forgot password",
+  "enter_email_to_reset": "Enter your email address and we will send you a reset instructions.",
+  "email_address": "Email Address",
+  "reset_password": "Reset Password",
+  "send_again": "Send again"
 }

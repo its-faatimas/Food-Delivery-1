@@ -35,8 +35,8 @@ flutter:
 
   assets:
     - assets/icons/
+    - assets/icons/rectangle/
     - assets/illustrations/
-
     - assets/translations/
 
 

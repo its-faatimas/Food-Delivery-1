@@ -1,6 +1,7 @@
 //Screens
 export 'package:foodly/screens/on_boarding/on_boarding_page.dart';
 export 'package:foodly/screens/home/home_page.dart';
+export 'package:foodly/screens/auth/sign_in_page.dart';
 
 // Widgets
 export 'package:foodly/widgets/page_indicator.dart';
@@ -8,7 +9,7 @@ export 'package:foodly/widgets/text/my_text.dart';
 export 'package:foodly/widgets/buttons/primary_button.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
 export 'package:foodly/widgets/buttons/my_icon_button.dart';
-export 'package:foodly/widgets/my_app_bar.dart';
+export 'package:foodly/widgets/app_bars/simple_app_bar.dart';
 export 'package:foodly/widgets/my_text_form_field.dart';
 
 // Components
@@ -20,6 +21,10 @@ export 'package:foodly/core/components/my_edge_insets.dart';
 export 'package:foodly/core/constants/app_colors.dart';
 export 'package:foodly/core/constants/app_icons.dart';
 export 'package:foodly/core/constants/app_illustrations.dart';
+
+// Styles
+export 'package:foodly/widgets/text/my_text_style.dart';
+
 
 // Packages
 export 'package:flutter_bloc/flutter_bloc.dart';

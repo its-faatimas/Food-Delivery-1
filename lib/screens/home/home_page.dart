@@ -16,7 +16,7 @@ class HomePage extends StatelessWidget {
         builder: (context, state) {
           return Scaffold(
             //app bar qo'shildi
-            appBar: const MyAppBar(title: 'MyAppBar'),
+            appBar: const SimpleAppBar(title: 'MyAppBar'),
             body: Center(
               // Child'ga Padding berdik
               child: Padding(

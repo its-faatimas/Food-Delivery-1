@@ -30,4 +30,9 @@ class AppIcons {
   static const String search = 'assets/icons/search.svg';
   static const String share = 'assets/icons/share.svg';
   static const String visible = 'assets/icons/visible.svg';
+  static const String googleRect = 'assets/icons/rectangle/google.svg';
+  static const String facebookRect = 'assets/icons/rectangle/facebook.svg';
+  static const String masterCard = 'assets/icons/rectangle/master_card.svg';
+  static const String visa = 'assets/icons/rectangle/visa.svg';
+  static const String paypal = 'assets/icons/rectangle/paypal.svg';
 }

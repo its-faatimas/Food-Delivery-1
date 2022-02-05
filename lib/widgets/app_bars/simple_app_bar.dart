@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
-class MyAppBar extends StatelessWidget with PreferredSizeWidget {
+class SimpleAppBar extends StatelessWidget with PreferredSizeWidget {
   final String title;
-  const MyAppBar({Key? key,required this.title}) : super(key: key);
+
+  const SimpleAppBar({Key? key, required this.title}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

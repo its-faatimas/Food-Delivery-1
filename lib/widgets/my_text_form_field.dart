@@ -8,7 +8,8 @@ class MyTextFormField extends StatelessWidget {
   TextInputType inputType;
   TextInputAction inputAction;
   bool obscureText;
-
+  Widget? suffix;
+  TextCapitalization capitalization;
   MyTextFormField({
     Key? key,
     required this.controller,
@@ -16,6 +17,8 @@ class MyTextFormField extends StatelessWidget {
     this.inputType = TextInputType.text,
     this.inputAction = TextInputAction.next,
     this.obscureText = false,
+    this.suffix,
+    this.capitalization = TextCapitalization.none,
   }) : super(key: key);
 
   @override
@@ -25,10 +28,11 @@ class MyTextFormField extends StatelessWidget {
       keyboardType: inputType,
       textInputAction: inputAction,
       obscureText: obscureText,
-
-      style: getRegularStyle(color: AppColors.dark, fontSize: 16.0),
+      textCapitalization: capitalization,
+      style: AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 16.0),
       decoration: InputDecoration(
         hintText: hint,
+        suffixIcon: suffix,
       ),
     );
   }

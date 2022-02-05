@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/widgets/buttons/social_media_button.dart';
 
 class WidgetTestPage extends StatefulWidget {
   const WidgetTestPage({Key? key}) : super(key: key);
@@ -16,10 +17,22 @@ class _WidgetTestPageState extends State<WidgetTestPage> {
       body: Center(
         child: Padding(
           padding: MyEdgeInsets.symmetric(h: 16.0),
-          child: MyTextFormField(
-            hint: 'Email',
-            controller: TextEditingController(),
-            inputType: TextInputType.emailAddress,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              MyTextFormField(
+                hint: 'Email',
+                controller: TextEditingController(),
+                inputType: TextInputType.emailAddress,
+                capitalization: TextCapitalization.words,
+              ),
+              SocialMediaButton(
+                onPressed: () {},
+                assetIcon: AppIcons.facebookRect,
+                label: LocaleKeys.connectWith.tr(args: ['Facebook']).toUpperCase(),
+              ),
+              PrimaryButton(onPressed: (){}, label: LocaleKeys.signUp.tr().toUpperCase())
+            ],
           ),
         ),
       ),

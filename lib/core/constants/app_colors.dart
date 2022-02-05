@@ -10,4 +10,5 @@ class AppColors {
   static const Color blue = Color(0xFF4285F4);
   static const Color indigo = Color(0xFF395998);
   static const Color lightGrey = Color(0xFFFBFBFB);
+  static const Color border = Color(0xFFF3F2F2);
 }

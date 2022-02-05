@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/app_colors.dart';
+import 'package:foodly/core/styles/app_text_style.dart';
 
 class SocialMediaButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -24,12 +25,16 @@ class SocialMediaButton extends StatelessWidget {
         children: [
           SvgPicture.asset(assetIcon),
           MySizedBox(width: 30.0),
-          Text(label),
+          Text(
+            label,
+            style: AppTextStyle.getButtonStyle(size: getWidth(12.0)),
+          ),
         ],
       ),
       style: ElevatedButton.styleFrom(
         primary: color,
         padding: MyEdgeInsets.symmetric(h: 16.0, v: 8.0),
+        fixedSize: Size(MediaQuery.of(context).size.width, getHeight(44.0))
       ),
     );
   }

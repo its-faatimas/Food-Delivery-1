@@ -26,9 +26,9 @@ ThemeData getApplicationTheme() {
         iconTheme: const IconThemeData(color: AppColors.dark),
         shadowColor: AppColors.darkGrey,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        titleTextStyle: getSemiBoldStyle(
+        titleTextStyle: AppTextStyle.getSemiBoldStyle(
           color: AppColors.dark,
-          fontSize: 18.0,
+          fontSize: 16.0,
         )),
     // Button theme
     buttonTheme: ButtonThemeData(
@@ -40,7 +40,7 @@ ThemeData getApplicationTheme() {
     // outlined button theme
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        textStyle: getMediumStyle(color: AppColors.green),
+        textStyle: AppTextStyle.getMediumStyle(color: AppColors.green),
         primary: AppColors.green,
         alignment: Alignment.centerLeft,
         shape: RoundedRectangleBorder(
@@ -56,7 +56,7 @@ ThemeData getApplicationTheme() {
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         elevation: 0.0,
-        textStyle: getSemiBoldStyle(color: AppColors.white),
+        textStyle: AppTextStyle.getButtonStyle(),
         primary: AppColors.green,
         fixedSize: const Size(335.0, 48.0),
         shape: RoundedRectangleBorder(
@@ -67,15 +67,21 @@ ThemeData getApplicationTheme() {
 
     // Text theme
     textTheme: TextTheme(
-      headline1: getSemiBoldStyle(color: AppColors.darkGrey, fontSize: 14.0),
-      headline2: getRegularStyle(color: AppColors.white, fontSize: 14.0),
-      headline3: getBoldStyle(color: AppColors.green, fontSize: 14.0),
-      headline4: getRegularStyle(color: AppColors.green, fontSize: 14.0),
-      subtitle1: getMediumStyle(color: AppColors.grey, fontSize: 14.0),
-      subtitle2: getMediumStyle(color: AppColors.green, fontSize: 14.0),
-      bodyText1: getRegularStyle(color: AppColors.grey),
-      bodyText2: getMediumStyle(color: AppColors.grey),
-      caption: getRegularStyle(color: AppColors.grey),
+      headline1:
+          AppTextStyle.getSemiBoldStyle(color: AppColors.dark, fontSize: 14.0),
+      headline2:
+          AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 14.0),
+      headline3:
+          AppTextStyle.getBoldStyle(color: AppColors.dark, fontSize: 14.0),
+      headline4:
+          AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 14.0),
+      subtitle1:
+          AppTextStyle.getMediumStyle(color: AppColors.dark, fontSize: 14.0),
+      subtitle2:
+          AppTextStyle.getMediumStyle(color: AppColors.dark, fontSize: 14.0),
+      bodyText1: AppTextStyle.getRegularStyle(color: AppColors.dark),
+      bodyText2: AppTextStyle.getMediumStyle(color: AppColors.dark),
+      caption: AppTextStyle.getRegularStyle(color: AppColors.dark),
     ),
     // input decoration theme (text form field)
 
@@ -86,23 +92,24 @@ ThemeData getApplicationTheme() {
       fillColor: AppColors.lightGrey,
 
       // hint style
-      hintStyle: getRegularStyle(color: AppColors.darkGrey, fontSize: 16.0),
+      hintStyle: AppTextStyle.getRegularStyle(
+          color: AppColors.darkGrey, fontSize: 16.0),
 
       // label style
-      labelStyle: getMediumStyle(color: AppColors.darkGrey),
+      labelStyle: AppTextStyle.getMediumStyle(color: AppColors.darkGrey),
       // error style
-      errorStyle: getRegularStyle(color: AppColors.orange),
+      errorStyle: AppTextStyle.getRegularStyle(color: AppColors.orange),
 
       // enabled border
-      enabledBorder: _outlineInputBorder(AppColors.darkGrey),
+      enabledBorder: _outlineInputBorder(AppColors.border),
 
       // focused border
-      focusedBorder: _outlineInputBorder(AppColors.darkGrey),
+      focusedBorder: _outlineInputBorder(AppColors.border),
 
       // error border
       errorBorder: _outlineInputBorder(AppColors.orange),
       // focused error border
-      focusedErrorBorder: _outlineInputBorder(AppColors.darkGrey),
+      focusedErrorBorder: _outlineInputBorder(AppColors.border),
     ),
   );
 }
@@ -110,7 +117,7 @@ ThemeData getApplicationTheme() {
 OutlineInputBorder _outlineInputBorder(Color color) {
   return OutlineInputBorder(
       borderSide: BorderSide(color: color, width: 1.0),
-      borderRadius: const BorderRadius.all(Radius.circular(8.0)));
+      borderRadius: const BorderRadius.all(Radius.circular(6.0)));
 }
 
 UnderlineInputBorder _underlineInputBorder(Color color) => UnderlineInputBorder(

@@ -2,5 +2,20 @@
   "hello": "Salom",
   "appName": "Taom",
   "get_started": "Boshlash",
-  "welcome": "Xush kelibsiz"
+  "welcome": "Xush kelibsiz",
+  "password": "Parol",
+  "email": "Email",
+  "sign_in": "Kirish",
+  "sign_up": "Ro`yxatdan o`tish",
+  "name": "Ism",
+  "forget_password": "Parolni unutdingizmi?",
+  "or": "Yoki",
+  "enter_your_phone_or_email_for_sign_in_or": "Kirish uchun telefon raqamingizni yoki emailingizni kiriting. Yoki",
+  "create_new_account": "Yangi Hisob ochish.",
+  "connect_with": "{} orqali ulanish",
+  "forgot_password": "Parolni unutdi",
+  "enter_email_to_reset": "Email manzilingizni kiriting, biz sizga qayta o`rnatish instruksiyasini yuboramiz.",
+  "email_address": "Email Manzil",
+  "reset_password": "Parolni tiklash",
+  "send_again": "Qayta yuborish"
 }
