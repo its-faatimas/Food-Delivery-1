@@ -10,6 +10,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    SizeConfig().init(context);
     return BlocProvider(
       create: (_) => HomePageCubit(),
       child: BlocBuilder<HomePageCubit, HomePageState>(
@@ -23,13 +24,11 @@ class HomePage extends StatelessWidget {
                 padding: const EdgeInsets.symmetric(horizontal: 20.0),
                 child: MyTextFormField(
                   controller: TextEditingController(),
-                  hint: 'Email',
+                  hint: LocaleKeys.hello.tr(),
                 ),
               ),
-            ),
-            floatingActionButton: FloatingActionButton(
-              onPressed: (){
-                print(LocaleKeys.hello.tr());
+            ),floatingActionButton: FloatingActionButton(
+              onPressed: ()async{
               },
             ),
           );

@@ -24,7 +24,9 @@ export 'package:foodly/core/constants/app_illustrations.dart';
 // Packages
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:flutter_svg/flutter_svg.dart';
+export 'package:easy_localization/easy_localization.dart';
 
 // Others
 export 'package:flutter/services.dart';
-
+export 'package:foodly/translations/codegen_loader.g.dart';
+export 'package:foodly/translations/locale_keys.g.dart';

@@ -1,18 +1,17 @@
-
-import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/styles/app_theme.dart';
-import 'package:foodly/screens/on_boarding/splash_screen_page.dart';
-import 'package:foodly/translations/codegen_loader.g.dart';
-
+import 'package:foodly/screens/forTest/widget_test.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
   runApp(
     EasyLocalization(
-      supportedLocales: const [Locale('en', 'US'), Locale('uz', 'UZ')],
+      supportedLocales: const [
+        Locale('en', 'US'),
+        Locale('uz', 'UZ'),
+      ],
       path: 'assets/translations',
       fallbackLocale: const Locale('uz', 'UZ'),
       assetLoader: const CodegenLoader(),
@@ -33,13 +32,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Food',
+      title: LocaleKeys.appName.tr(),
       debugShowCheckedModeBanner: false,
       theme: getApplicationTheme(),
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: const SplashScreenPage(),
+      home: const WidgetTestPage(),
     );
   }
 }
