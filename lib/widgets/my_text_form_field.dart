@@ -25,6 +25,7 @@ class MyTextFormField extends StatelessWidget {
       keyboardType: inputType,
       textInputAction: inputAction,
       obscureText: obscureText,
+
       style: getRegularStyle(color: AppColors.dark, fontSize: 16.0),
       decoration: InputDecoration(
         hintText: hint,

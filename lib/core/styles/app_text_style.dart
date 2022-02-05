@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
+
 TextStyle _getTextStyle(
   double fontSize,
   String fontFamily,

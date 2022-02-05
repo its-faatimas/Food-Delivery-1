@@ -3,20 +3,16 @@ import 'package:foodly/core/components/exporting_packages.dart';
 
 class MyText extends StatelessWidget {
   final String text;
-  Color color;
-  double size;
+  TextStyle? style;
   int? lines;
   TextAlign? align;
-  FontWeight? weight;
 
   MyText(
     this.text, {
     Key? key,
-    this.color = AppColors.dark,
-    this.size = 14.0,
-    this.lines,
+    this.style,
     this.align,
-    this.weight,
+    this.lines,
   }) : super(key: key);
 
   @override
@@ -25,11 +21,7 @@ class MyText extends StatelessWidget {
       text,
       maxLines: lines,
       textAlign: align,
-      style: TextStyle(
-        fontSize: getWidth(size),
-        color: color,
-        fontWeight: weight,
-      ),
+      style: style,
     );
   }
 }

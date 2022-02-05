@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/cubit/home/home_page_cubit.dart';
@@ -27,10 +26,9 @@ class HomePage extends StatelessWidget {
                   hint: LocaleKeys.hello.tr(),
                 ),
               ),
-            ),floatingActionButton: FloatingActionButton(
-              onPressed: ()async{
-              },
-            ),
+            ), floatingActionButton: FloatingActionButton(
+            onPressed: () async {},
+          ),
           );
         },
       ),

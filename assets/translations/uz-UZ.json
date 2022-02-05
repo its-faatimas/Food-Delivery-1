@@ -1,4 +1,6 @@
 {
-  "hello" : "Salom",
-  "appName" : "Foodly"
+  "hello": "Salom",
+  "appName": "Taom",
+  "get_started": "Boshlash",
+  "welcome": "Xush kelibsiz"
 }

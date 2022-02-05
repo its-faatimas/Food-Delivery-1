@@ -17,8 +17,9 @@ class _WidgetTestPageState extends State<WidgetTestPage> {
         child: Padding(
           padding: MyEdgeInsets.symmetric(h: 16.0),
           child: MyTextFormField(
-            hint: '',
+            hint: 'Email',
             controller: TextEditingController(),
+            inputType: TextInputType.emailAddress,
           ),
         ),
       ),

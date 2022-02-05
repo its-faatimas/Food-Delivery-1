@@ -3,6 +3,7 @@ import 'package:foodly/core/components/custom_navigator.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/on_boardin_data.dart';
 import 'package:foodly/cubit/onboarding/on_boarding_cubit.dart';
+import 'package:foodly/widgets/text/my_text_style.dart';
 
 class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
@@ -60,13 +61,12 @@ class OnBoardingPage extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          MyText(title, size: 30.0),
+          MyText(title, style: MyTextStyle.bold(size: 30.0)),
           MySizedBox(height: 20.0),
           MyText(
             subtitle,
             align: TextAlign.center,
-            color: AppColors.darkGrey,
-            weight: FontWeight.w400,
+            style: MyTextStyle.regular(color: AppColors.darkGrey),
           ),
           MySizedBox(height: 223.0),
         ],

@@ -14,7 +14,7 @@ ThemeData getApplicationTheme() {
 
     canvasColor: AppColors.white,
 
-    fontFamily: "AvenirNext",
+    fontFamily: "SF-Pro",
 
     cardTheme: const CardTheme(
         color: AppColors.white, shadowColor: AppColors.grey, elevation: 0.0),
@@ -82,6 +82,8 @@ ThemeData getApplicationTheme() {
     inputDecorationTheme: InputDecorationTheme(
       contentPadding:
           const EdgeInsets.symmetric(horizontal: 20.0, vertical: 21.0),
+      filled: true,
+      fillColor: AppColors.lightGrey,
 
       // hint style
       hintStyle: getRegularStyle(color: AppColors.darkGrey, fontSize: 16.0),

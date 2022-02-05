@@ -1,4 +1,6 @@
 {
-  "hello" : "Hello",
-  "appName" : "Foodly"
+  "hello": "Hello",
+  "appName": "Foodly",
+  "get_started": "Get Started",
+  "welcome": "Welcome"
 }
