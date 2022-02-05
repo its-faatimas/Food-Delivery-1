@@ -6,11 +6,17 @@ part 'sign_in_state.dart';
 class SignInCubit extends Cubit<SignInState> {
   SignInCubit() : super(SignInInitial());
 
-  final GlobalKey<FormFieldState> _formKey = GlobalKey<FormFieldState>();
+  final GlobalKey<FormState> _formKey = GlobalKey<FormState>();
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
-  GlobalKey<FormFieldState> get formKey => _formKey;
+  void onPressed() {
+    if(_formKey.currentState!.validate()) {
+
+    }
+  }
+
+  GlobalKey<FormState> get formKey => _formKey;
 
   TextEditingController get passwordController => _passwordController;
 

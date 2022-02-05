@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
-import 'package:foodly/core/constants/app_colors.dart';
 import 'package:foodly/core/styles/app_text_style.dart';
 
 class SocialMediaButton extends StatelessWidget {

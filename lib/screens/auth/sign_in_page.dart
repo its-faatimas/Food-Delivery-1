@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
-import 'package:foodly/cubit/sign_in_cubit/sign_in_cubit.dart';
+import 'package:foodly/core/functions/text_form_field_validator.dart';
+import 'package:foodly/cubit/auth_cubit/sign_in_cubit/sign_in_cubit.dart';
 import 'package:foodly/widgets/buttons/social_media_button.dart';
 
 class SignInPage extends StatelessWidget {
@@ -31,14 +32,18 @@ class SignInPage extends StatelessWidget {
                     style: MyTextStyle.regular(color: AppColors.darkGrey),
                   ),
                   MySizedBox(height: 34.0),
+
+                  // Form
                   Form(
                     key: cubit.formKey,
                     child: Column(
                       children: [
+                        // Email Field
                         MyTextFormField(
                           hint: LocaleKeys.email.tr(),
                           controller: cubit.emailController,
                           inputType: TextInputType.emailAddress,
+                          validator: FormValidator.email,
                         ),
                         MySizedBox(height: 14.0),
                         MyTextFormField(
@@ -46,6 +51,7 @@ class SignInPage extends StatelessWidget {
                           controller: cubit.passwordController,
                           inputType: TextInputType.visiblePassword,
                           inputAction: TextInputAction.done,
+                          validator: FormValidator.password,
                           obscureText: true,
                         ),
                         MySizedBox(height: 20.0),
@@ -55,7 +61,7 @@ class SignInPage extends StatelessWidget {
                         ),
                         MySizedBox(height: 20.0),
                         PrimaryButton(
-                          onPressed: () {},
+                          onPressed: cubit.onPressed,
                           label: LocaleKeys.signIn.tr(),
                         ),
                         Padding(
