@@ -1,16 +1,21 @@
+
 //Screens
+export 'package:foodly/screens/forTest/widget_test.dart';
 export 'package:foodly/screens/on_boarding/on_boarding_page.dart';
 export 'package:foodly/screens/home/home_page.dart';
 export 'package:foodly/screens/auth/sign_in_page.dart';
+export 'package:foodly/screens/auth/sign_up_page.dart';
 
 // Widgets
 export 'package:foodly/widgets/page_indicator.dart';
 export 'package:foodly/widgets/text/my_text.dart';
-export 'package:foodly/widgets/buttons/primary_button.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
-export 'package:foodly/widgets/buttons/my_icon_button.dart';
 export 'package:foodly/widgets/app_bars/simple_app_bar.dart';
 export 'package:foodly/widgets/my_text_form_field.dart';
+export 'package:foodly/widgets/buttons/my_icon_button.dart';
+export 'package:foodly/widgets/buttons/primary_button.dart';
+export 'package:foodly/widgets/buttons/all_social_media_buttons.dart';
+
 
 // Components
 export 'package:foodly/core/components/size_config.dart';
@@ -35,3 +40,7 @@ export 'package:easy_localization/easy_localization.dart';
 export 'package:flutter/services.dart';
 export 'package:foodly/translations/codegen_loader.g.dart';
 export 'package:foodly/translations/locale_keys.g.dart';
+
+// Functions
+export 'package:foodly/core/functions/text_form_field_validator.dart';
+

@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
-import 'package:foodly/core/functions/text_form_field_validator.dart';
 import 'package:foodly/cubit/auth_cubit/sign_in_cubit/sign_in_cubit.dart';
-import 'package:foodly/widgets/buttons/social_media_button.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({Key? key}) : super(key: key);
@@ -16,18 +14,18 @@ class SignInPage extends StatelessWidget {
         builder: (ctx, state) {
           SignInCubit cubit = ctx.watch();
           return Scaffold(
-            appBar: SimpleAppBar(title: LocaleKeys.signUp.tr()),
+            appBar: SimpleAppBar(title: LocaleKeys.signIn.tr()),
             body: SingleChildScrollView(
               padding: MyEdgeInsets.symmetric(h: 20.0, v: 24.0),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  MyText(
+                  Text(
                     LocaleKeys.welcome.tr(),
                     style: MyTextStyle.semiBold(size: 34.0),
                   ),
                   MySizedBox(height: 20.0),
-                  MyText(
+                  Text(
                     LocaleKeys.enterEmailToReset.tr(),
                     style: MyTextStyle.regular(color: AppColors.darkGrey),
                   ),
@@ -45,7 +43,10 @@ class SignInPage extends StatelessWidget {
                           inputType: TextInputType.emailAddress,
                           validator: FormValidator.email,
                         ),
+
                         MySizedBox(height: 14.0),
+
+                        // Password Field
                         MyTextFormField(
                           hint: LocaleKeys.password.tr(),
                           controller: cubit.passwordController,
@@ -55,15 +56,36 @@ class SignInPage extends StatelessWidget {
                           obscureText: true,
                         ),
                         MySizedBox(height: 20.0),
-                        MyText(
+                        Text(
                           LocaleKeys.forgetPassword.tr(),
                           style: MyTextStyle.regular(size: 12.0),
                         ),
                         MySizedBox(height: 20.0),
+
+                        // Sign in button
                         PrimaryButton(
                           onPressed: cubit.onPressed,
                           label: LocaleKeys.signIn.tr(),
                         ),
+                        MySizedBox(height: 20.0),
+
+
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: [
+                            Text(
+                              "Don't have an account?",
+                              style: MyTextStyle.regular(size: 12.0),
+                            ),
+                            TextButton(
+                              onPressed: () {},
+                              child: Text(
+                                LocaleKeys.createNewAccount.tr(),
+                              ),
+                            )
+                          ],
+                        ),
+
                         Padding(
                           padding: MyEdgeInsets.symmetric(v: 24.0),
                           child: MyText(
@@ -74,20 +96,8 @@ class SignInPage extends StatelessWidget {
                       ],
                     ),
                   ),
-                  SocialMediaButton(
-                    onPressed: () {},
-                    assetIcon: AppIcons.facebookRect,
-                    label: LocaleKeys.connectWith
-                        .tr(args: ['facebook']).toUpperCase(),
-                  ),
-                  MySizedBox(height: 16.0),
-                  SocialMediaButton(
-                    color: AppColors.blue,
-                    onPressed: () {},
-                    assetIcon: AppIcons.googleRect,
-                    label: LocaleKeys.connectWith
-                        .tr(args: ['google']).toUpperCase(),
-                  ),
+
+                  const AllSocialMediaButtons(),
                 ],
               ),
             ),

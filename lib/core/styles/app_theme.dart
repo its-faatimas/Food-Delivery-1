@@ -65,6 +65,13 @@ ThemeData getApplicationTheme() {
       ),
     ),
 
+    textButtonTheme: TextButtonThemeData(
+      style: TextButton.styleFrom(
+        primary: AppColors.green,
+        textStyle: const TextStyle(fontSize: 12.0),
+      ),
+    ),
+
     // Text theme
     textTheme: TextTheme(
       headline1:
@@ -72,7 +79,7 @@ ThemeData getApplicationTheme() {
       headline2:
           AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 14.0),
       headline3:
-          AppTextStyle.getBoldStyle(color: AppColors.dark, fontSize: 14.0),
+          AppTextStyle.getBoldStyle(color: AppColors.dark, fontSize: 24.0),
       headline4:
           AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 14.0),
       subtitle1:

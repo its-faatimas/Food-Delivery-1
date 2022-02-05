@@ -17,5 +17,6 @@
   "enter_email_to_reset": "Email manzilingizni kiriting, biz sizga qayta o`rnatish instruksiyasini yuboramiz.",
   "email_address": "Email Manzil",
   "reset_password": "Parolni tiklash",
-  "send_again": "Qayta yuborish"
+  "send_again": "Qayta yuborish",
+  "dontHaveAccount": "Hisobingiz yo`qmi?"
 }

@@ -17,5 +17,6 @@
   "enter_email_to_reset": "Enter your email address and we will send you a reset instructions.",
   "email_address": "Email Address",
   "reset_password": "Reset Password",
-  "send_again": "Send again"
+  "send_again": "Send again",
+  "dontHaveAccount": "Don’t have account?"
 }
