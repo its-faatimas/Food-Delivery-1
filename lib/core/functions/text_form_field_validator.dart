@@ -17,7 +17,7 @@ class FormValidator {
     }
   }
 
-  static String? general(String value) {
+  static String? general(value) {
     if (value.isEmpty) {
       return "Please, Fill the field";
     } else if (value.length < 6) {
