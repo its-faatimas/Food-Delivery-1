@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/styles/app_theme.dart';
+import 'package:foodly/screens/auth/entering_phone_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: const OnBoardingPage(),
+      home: const EnteringPhonePage(),
     );
   }
 }
