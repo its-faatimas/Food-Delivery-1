@@ -20,19 +20,10 @@ class SignUpPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    LocaleKeys.createNewAccount.tr(),
-                    style: MyTextStyle.semiBold(size: 34.0),
+                  AuthHeader(
+                    title: LocaleKeys.createNewAccount,
+                    subtitle: LocaleKeys.enterEmailToReset,
                   ),
-                  MySizedBox(height: 20.0),
-                  Text(
-                    LocaleKeys.enterEmailToReset.tr(),
-                    style: MyTextStyle.regular(
-                      size: 16.0,
-                      color: AppColors.darkGrey,
-                    ),
-                  ),
-                  MySizedBox(height: 34.0),
                   Form(
                     key: cubit.formKey,
                     child: Column(

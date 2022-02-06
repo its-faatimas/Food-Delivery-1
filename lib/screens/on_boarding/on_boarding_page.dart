@@ -3,6 +3,7 @@ import 'package:foodly/core/components/custom_navigator.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/on_boardin_data.dart';
 import 'package:foodly/cubit/onboarding/on_boarding_cubit.dart';
+import 'package:foodly/screens/auth/forgot_password_page.dart';
 
 class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
@@ -100,6 +101,6 @@ class _OnBoardingPageState extends State<OnBoardingPage>
   }
 
   void _onButtonPressed() {
-    navigatorPushReplacement(const HomePage());
+    navigatorPushReplacement(const ForgotPasswordPage());
   }
 }

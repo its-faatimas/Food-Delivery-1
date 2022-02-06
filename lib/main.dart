@@ -12,7 +12,7 @@ void main() async {
         Locale('uz', 'UZ'),
       ],
       path: 'assets/translations',
-      fallbackLocale: const Locale('uz', 'UZ'),
+      fallbackLocale: const Locale('en', 'US'),
       assetLoader: const CodegenLoader(),
       child: const MyApp(),
     ),
@@ -37,7 +37,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: const WidgetTestPage(),
+      home: const OnBoardingPage(),
     );
   }
 }

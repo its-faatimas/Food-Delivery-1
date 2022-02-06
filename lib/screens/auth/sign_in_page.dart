@@ -20,17 +20,10 @@ class SignInPage extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(
-                    LocaleKeys.welcome.tr(),
-                    style: MyTextStyle.semiBold(size: 34.0),
+                  AuthHeader(
+                    title: LocaleKeys.welcome,
+                    subtitle: LocaleKeys.enterYourPhoneOrEmailForSignInOr,
                   ),
-                  MySizedBox(height: 20.0),
-                  Text(
-                    LocaleKeys.enterEmailToReset.tr(),
-                    style: MyTextStyle.regular(color: AppColors.darkGrey),
-                  ),
-                  MySizedBox(height: 34.0),
-
                   // Form
                   Form(
                     key: cubit.formKey,
@@ -68,7 +61,6 @@ class SignInPage extends StatelessWidget {
                           label: LocaleKeys.signIn.tr(),
                         ),
                         MySizedBox(height: 20.0),
-
 
                         Row(
                           mainAxisAlignment: MainAxisAlignment.center,
