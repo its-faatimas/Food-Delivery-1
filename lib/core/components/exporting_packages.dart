@@ -4,6 +4,7 @@ export 'package:foodly/screens/on_boarding/on_boarding_page.dart';
 export 'package:foodly/screens/home/home_screen.dart';
 export 'package:foodly/screens/auth/sign_in_page.dart';
 export 'package:foodly/screens/auth/sign_up_page.dart';
+export 'package:foodly/screens/auth/auth_base_page.dart';
 
 // Widgets
 export 'package:foodly/widgets/page_indicator.dart';

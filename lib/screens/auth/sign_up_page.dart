@@ -13,57 +13,49 @@ class SignUpPage extends StatelessWidget {
       child: BlocBuilder<SignUpCubit, SignUpState>(
         builder: (ctx, state) {
           SignUpCubit cubit = ctx.watch();
-          return Scaffold(
-            appBar: SimpleAppBar(title: LocaleKeys.signUp.tr()),
-            body: SingleChildScrollView(
-              padding: MyEdgeInsets.symmetric(h: 20.0, v: 24.0),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  AuthHeader(
-                    title: LocaleKeys.createNewAccount,
-                    subtitle: LocaleKeys.enterEmailToReset,
+          return AuthBasePage(
+              appBarTitle: LocaleKeys.signUp.tr(),
+              pageTitle: LocaleKeys.createNewAccount,
+              pageSubtitle: LocaleKeys.enterYourPhoneOrEmailForSignInOr,
+              centerTitle: false,
+              widgets: [
+                Form(
+                  key: cubit.formKey,
+                  child: Column(
+                    children: [
+                      MyTextFormField(
+                        inputType: TextInputType.name,
+                        capitalization: TextCapitalization.words,
+                        controller: cubit.fullNameController,
+                        hint: LocaleKeys.name.tr(),
+                        validator: FormValidator.general,
+                      ),
+                      MySizedBox(height: 14.0),
+                      MyTextFormField(
+                        controller: cubit.emailController,
+                        hint: LocaleKeys.email.tr(),
+                        validator: FormValidator.email,
+                        inputType: TextInputType.emailAddress,
+                      ),
+                      MySizedBox(height: 14.0),
+                      MyTextFormField(
+                        controller: cubit.passwordController,
+                        hint: LocaleKeys.password.tr(),
+                        validator: FormValidator.password,
+                        inputType: TextInputType.visiblePassword,
+                        obscureText: true,
+                      ),
+                    ],
                   ),
-                  Form(
-                    key: cubit.formKey,
-                    child: Column(
-                      children: [
-                        MyTextFormField(
-                          inputType: TextInputType.name,
-                          capitalization: TextCapitalization.words,
-                          controller: cubit.fullNameController,
-                          hint: LocaleKeys.name.tr(),
-                          validator: FormValidator.general,
-                        ),
-                        MySizedBox(height: 14.0),
-                        MyTextFormField(
-                          controller: cubit.emailController,
-                          hint: LocaleKeys.email.tr(),
-                          validator: FormValidator.email,
-                          inputType: TextInputType.emailAddress,
-                        ),
-                        MySizedBox(height: 14.0),
-                        MyTextFormField(
-                          controller: cubit.passwordController,
-                          hint: LocaleKeys.password.tr(),
-                          validator: FormValidator.password,
-                          inputType: TextInputType.visiblePassword,
-                          obscureText: true,
-                        ),
-                      ],
-                    ),
-                  ),
-                  MySizedBox(height: 24.0),
-                  PrimaryButton(
-                    onPressed: cubit.onPressed,
-                    label: LocaleKeys.signUp.tr().toUpperCase(),
-                  ),
-                  MySizedBox(height: 24.0),
-                  const AllSocialMediaButtons(),
-                ],
-              ),
-            ),
-          );
+                ),
+                MySizedBox(height: 24.0),
+                PrimaryButton(
+                  onPressed: cubit.onPressed,
+                  label: LocaleKeys.signUp.tr().toUpperCase(),
+                ),
+                MySizedBox(height: 24.0),
+                const AllSocialMediaButtons(),
+              ]);
         },
       ),
     );

@@ -4,23 +4,25 @@ import 'package:foodly/core/components/exporting_packages.dart';
 class AuthHeader extends StatelessWidget {
   final String title;
   final String subtitle;
-  double titleSize;
-  CrossAxisAlignment crossAxisAlignment;
+  final bool centerTitle;
 
-  AuthHeader({
+  const AuthHeader({
     Key? key,
     required this.title,
     required this.subtitle,
-    this.crossAxisAlignment = CrossAxisAlignment.start,
-    this.titleSize = 34.0,
+    required this.centerTitle,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Column(
-      crossAxisAlignment: crossAxisAlignment,
+      crossAxisAlignment:
+          centerTitle ? CrossAxisAlignment.center : CrossAxisAlignment.start,
       children: [
-        Text(title.tr(), style: MyTextStyle.semiBold(size: titleSize)),
+        Text(
+          title.tr(),
+          style: MyTextStyle.semiBold(size: centerTitle ? 24.0 : 34.0),
+        ),
         MySizedBox(height: 20.0),
         Text(
           subtitle.tr(),

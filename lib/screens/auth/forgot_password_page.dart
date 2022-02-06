@@ -9,43 +9,37 @@ class ForgotPasswordPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: SimpleAppBar(title: LocaleKeys.forgotPassword.tr()),
-      body: Padding(
-        padding: MyEdgeInsets.symmetric(h: 20.0, v: 24.0),
-        child: Column(
-          children: [
-            AuthHeader(
-              title: LocaleKeys.forgotPassword,
-              subtitle: LocaleKeys.enterEmailToReset,
-            ),
-            Form(
-              key: _formKey,
-              child: MyTextFormField(
-                controller: _emailController,
-                hint: LocaleKeys.emailAddress.tr(),
-                inputType: TextInputType.emailAddress,
-                inputAction: TextInputAction.done,
-                validator: FormValidator.email,
-              ),
-            ),
-            MySizedBox(height: 24.0),
-            PrimaryButton(
-              onPressed: () {
-                if (_formKey.currentState!.validate()) {
-                  String email = _emailController.text.trim();
-                  Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (_) => SentEmailPage(email: email),
-                      ));
-                }
-              },
-              label: LocaleKeys.resetPassword.tr(),
-            )
-          ],
+    return AuthBasePage(
+      appBarTitle: LocaleKeys.forgotPassword.tr(),
+      pageTitle: LocaleKeys.forgotPassword,
+      pageSubtitle: LocaleKeys.enterEmailToReset,
+      centerTitle: false,
+      widgets: [
+        Form(
+          key: _formKey,
+          child: MyTextFormField(
+            controller: _emailController,
+            hint: LocaleKeys.emailAddress.tr(),
+            inputType: TextInputType.emailAddress,
+            inputAction: TextInputAction.done,
+            validator: FormValidator.email,
+          ),
         ),
-      ),
+        MySizedBox(height: 24.0),
+        PrimaryButton(
+          onPressed: () {
+            if (_formKey.currentState!.validate()) {
+              String email = _emailController.text.trim();
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => SentEmailPage(email: email),
+                  ));
+            }
+          },
+          label: LocaleKeys.resetPassword.tr(),
+        ),
+      ],
     );
   }
 }

@@ -8,20 +8,13 @@ class SentEmailPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: SimpleAppBar(title: LocaleKeys.resetPassword.tr()),
-      body: Padding(
-        padding: MyEdgeInsets.symmetric(v: 24.0, h: 20.0),
-        child: Column(
-          children: [
-            AuthHeader(
-              title: LocaleKeys.resetPassword,
-              subtitle: LocaleKeys.enterEmailToReset,
-            ),
-            PrimaryButton(onPressed: (){}, label: LocaleKeys.sendAgain),
-          ],
-        ),
-      ),
-    );
+    return AuthBasePage(
+        appBarTitle: LocaleKeys.resetPassword.tr(),
+        pageTitle: LocaleKeys.resetPassword,
+        pageSubtitle: LocaleKeys.enterEmailToReset,
+        centerTitle: false,
+        widgets: [
+          PrimaryButton(onPressed: () {}, label: LocaleKeys.sendAgain),
+        ]);
   }
 }
