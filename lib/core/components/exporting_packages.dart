@@ -1,7 +1,7 @@
 //Screens
 export 'package:foodly/screens/forTest/widget_test.dart';
 export 'package:foodly/screens/on_boarding/on_boarding_page.dart';
-export 'package:foodly/screens/home/home_page.dart';
+export 'package:foodly/screens/home/home_screen.dart';
 export 'package:foodly/screens/auth/sign_in_page.dart';
 export 'package:foodly/screens/auth/sign_up_page.dart';
 

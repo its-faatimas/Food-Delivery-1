@@ -31,7 +31,10 @@ class _WidgetTestPageState extends State<WidgetTestPage> {
                 assetIcon: AppIcons.facebookRect,
                 label: LocaleKeys.connectWith.tr(args: ['Facebook']).toUpperCase(),
               ),
-              PrimaryButton(onPressed: (){}, label: LocaleKeys.signUp.tr().toUpperCase())
+              PrimaryButton(onPressed: (){}, label: LocaleKeys.signUp.tr().toUpperCase()),
+              OutlinedButton(onPressed: (){},
+              child: Text(LocaleKeys.getStarted.tr().toUpperCase()),
+              )
             ],
           ),
         ),

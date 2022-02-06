@@ -16,8 +16,12 @@ ThemeData getApplicationTheme() {
 
     fontFamily: "SF-Pro",
 
+    // CARD THEME
     cardTheme: const CardTheme(
-        color: AppColors.white, shadowColor: AppColors.grey, elevation: 0.0),
+      color: AppColors.white,
+      shadowColor: AppColors.grey,
+      elevation: 0.0,
+    ),
     // App bar theme
     appBarTheme: AppBarTheme(
         centerTitle: true,
@@ -43,9 +47,9 @@ ThemeData getApplicationTheme() {
         textStyle: AppTextStyle.getMediumStyle(color: AppColors.green),
         primary: AppColors.green,
         alignment: Alignment.centerLeft,
+        side: const BorderSide(color: AppColors.green, width: 1.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),
-          side: const BorderSide(color: AppColors.green, width: 1),
         ),
       ),
     ),

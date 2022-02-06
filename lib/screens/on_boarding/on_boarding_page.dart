@@ -3,10 +3,32 @@ import 'package:foodly/core/components/custom_navigator.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/on_boardin_data.dart';
 import 'package:foodly/cubit/onboarding/on_boarding_cubit.dart';
-import 'package:foodly/widgets/text/my_text_style.dart';
 
-class OnBoardingPage extends StatelessWidget {
+class OnBoardingPage extends StatefulWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
+
+  @override
+  State<OnBoardingPage> createState() => _OnBoardingPageState();
+}
+
+class _OnBoardingPageState extends State<OnBoardingPage>
+    with TickerProviderStateMixin {
+  late AnimationController _animationController;
+
+  @override
+  void initState() {
+    super.initState();
+    _animationController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 300),
+      lowerBound: 0.0,
+      upperBound: 339.0,
+    );
+    _animationController.addListener(() {
+      setState(() {});
+    });
+    _animationController.forward();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -39,13 +61,16 @@ class OnBoardingPage extends StatelessWidget {
             right: getWidth(20.0),
             child: Column(
               children: [
-                SvgPicture.asset(OnBoardingData.list[cubit.currentIndex].img),
+                SvgPicture.asset(
+                  OnBoardingData.list[cubit.currentIndex].img,
+                  height: _animationController.value,
+                ),
                 MySizedBox(height: 150.0),
                 PageIndicator(len: 3, currentIndex: cubit.currentIndex),
                 MySizedBox(height: 60.0),
                 PrimaryButton(
                   onPressed: _onButtonPressed,
-                  label: 'GET STARTED',
+                  label: LocaleKeys.getStarted.tr().toUpperCase(),
                 ),
               ],
             ),

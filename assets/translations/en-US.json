@@ -18,5 +18,6 @@
   "email_address": "Email Address",
   "reset_password": "Reset Password",
   "send_again": "Send again",
-  "dontHaveAccount": "Don’t have account?"
+  "dontHaveAccount": "Don’t have account?",
+  "food": "Food"
 }
