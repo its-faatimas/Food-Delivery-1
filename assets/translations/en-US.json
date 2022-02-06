@@ -19,5 +19,21 @@
   "reset_password": "Reset Password",
   "send_again": "Send again",
   "dontHaveAccount": "Don’t have account?",
-  "food": "Food"
+  "food": "Food",
+  "accountSettings": "Account Settings",
+  "updateYourSettings": "Update your settings like notifications, payments, profile edit etc.",
+  "profileInformation": "Profile Information",
+  "change_your_acconut_info": "Change your account information",
+  "change_password": "Change Password",
+  "change_your_password": "Change your password",
+  "payment_methods": "Payment Methods",
+  "add_your_credit": "Add your credit & debit cards",
+  "locations": "Locations",
+  "add_or_remove_your_location": "Add or remove your delivery locations",
+  "add_social": "Add Social Account",
+  "add_fb_tw": "Add Facebook, Twitter etc ",
+  "refer_to": "Refer to Friends",
+  "get_money_for_ref": "Get ${} for reffering friends",
+  "notifications": "Notifications",
+  "more": "More"
 }

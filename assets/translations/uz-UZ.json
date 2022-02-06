@@ -19,5 +19,21 @@
   "reset_password": "Parolni tiklash",
   "send_again": "Qayta yuborish",
   "dontHaveAccount": "Hisobingiz yo`qmi?",
-  "food": "Muhsulot"
+  "food": "Muhsulot",
+  "accountSettings": "Akkount sozlamalari",
+  "updateYourSettings": "Bildirishnomalar, toʻlovlar, profilni tahrirlash kabi sozlamalarni yangilang.",
+  "profileInformation": "Profil ma'lumotlari",
+  "change_your_acconut_info": "Akkount ma'lumotlarini o'zgartirish",
+  "change_password": "Parolni O`zgartirish",
+  "change_your_password": "Parolingizni O`zgartiring",
+  "payment_methods": "To`lov turlari",
+  "add_your_credit": "Kredit va debit kartalaringizni qo`shing",
+  "locations": "Joylar",
+  "add_or_remove_your_location": "Yetkazish joyibgizni qo`shing yoki o`chiring",
+  "add_social": "Ijtimoiy hisob qo'shish",
+  "add_fb_tw": "Facebook, Twitter va hk. qo`shing",
+  "refer_to": "Do`stlarga ulashish",
+  "get_money_for_ref": "Do`stlarga ulashib {}$ oling",
+  "notifications": "Bildirishnomalar",
+  "more": "Ko`p"
 }

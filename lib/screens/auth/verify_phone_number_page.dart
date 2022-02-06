@@ -12,7 +12,9 @@ class VerifyPhoneNumberPage extends StatelessWidget {
       pageSubtitle: LocaleKeys.enterEmailToReset,
       centerTitle: true,
       widgets: [
-        PrimaryButton(onPressed: () {}, label: LocaleKeys.getStarted.tr()),
+        PrimaryButton(onPressed: () {
+          Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomePage()));
+        }, label: LocaleKeys.getStarted.tr()),
         MySizedBox(height: 24.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,

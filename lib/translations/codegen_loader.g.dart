@@ -35,7 +35,27 @@ class CodegenLoader extends AssetLoader {
         "Email manzilingizni kiriting, biz sizga qayta o`rnatish instruksiyasini yuboramiz.",
     "email_address": "Email Manzil",
     "reset_password": "Parolni tiklash",
-    "send_again": "Qayta yuborish"
+    "send_again": "Qayta yuborish",
+    "dontHaveAccount": "Hisobingiz yo`qmi?",
+    "food": "Muhsulot",
+    "accountSettings": "Akkount sozlamalari",
+    "updateYourSettings":
+        "Bildirishnomalar, toʻlovlar, profilni tahrirlash kabi sozlamalarni yangilang.",
+    "profileInformation": "Profil ma'lumotlari",
+    "change_your_acconut_info": "Akkount ma'lumotlarini o'zgartirish",
+    "change_password": "Parolni O`zgartirish",
+    "change_your_password": "Parolingizni O`zgartiring",
+    "payment_methods": "To`lov turlari",
+    "add_your_credit": "Kredit va debit kartalaringizni qo`shing",
+    "locations": "Joylar",
+    "add_or_remove_your_location":
+        "Yetkazish joyibgizni qo`shing yoki o`chiring",
+    "add_social": "Ijtimoiy hisob qo'shish",
+    "add_fb_tw": "Facebook, Twitter va hk. qo`shing",
+    "refer_to": "Do`stlarga ulashish",
+    "get_money_for_ref": "Do`stlarga ulashib {}\$ oling",
+    "notifications": "Bildirishnomalar",
+    "more": "Ko`p"
   };
   static const Map<String, dynamic> en_US = {
     "hello": "Hello",
@@ -58,7 +78,26 @@ class CodegenLoader extends AssetLoader {
         "Enter your email address and we will send you a reset instructions.",
     "email_address": "Email Address",
     "reset_password": "Reset Password",
-    "send_again": "Send again"
+    "send_again": "Send again",
+    "dontHaveAccount": "Don’t have account?",
+    "food": "Food",
+    "accountSettings": "Account Settings",
+    "updateYourSettings":
+        "Update your settings like notifications, payments, profile edit etc.",
+    "profileInformation": "Profile Information",
+    "change_your_acconut_info": "Change your account information",
+    "change_password": "Change Password",
+    "change_your_password": "Change your password",
+    "payment_methods": "Payment Methods",
+    "add_your_credit": "Add your credit & debit cards",
+    "locations": "Locations",
+    "add_or_remove_your_location": "Add or remove your delivery locations",
+    "add_social": "Add Social Account",
+    "add_fb_tw": "Add Facebook, Twitter etc ",
+    "refer_to": "Refer to Friends",
+    "get_money_for_ref": "Get \${} for reffering friends",
+    "notifications": "Notifications",
+    "more": "More"
   };
   static const Map<String, Map<String, dynamic>> mapLocales = {
     "uz_UZ": uz_UZ,
