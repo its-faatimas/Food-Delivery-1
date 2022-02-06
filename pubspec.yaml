@@ -19,6 +19,7 @@ dependencies:
   flutter_bloc: ^8.0.1
   flutter_svg: ^1.0.3
   easy_localization: ^3.0.0
+  backdrop: ^0.7.1
 
 dev_dependencies:
   flutter_test:

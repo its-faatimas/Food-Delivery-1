@@ -29,11 +29,11 @@ class _WidgetTestPageState extends State<WidgetTestPage> {
               SocialMediaButton(
                 onPressed: () {},
                 assetIcon: AppIcons.facebookRect,
-                label: LocaleKeys.connectWith.tr(args: ['Facebook']).toUpperCase(),
+                label: LocaleKeys.connect_with.tr(args: ['Facebook']).toUpperCase(),
               ),
-              PrimaryButton(onPressed: (){}, label: LocaleKeys.signUp.tr().toUpperCase()),
+              PrimaryButton(onPressed: (){}, label: LocaleKeys.sign_up.tr().toUpperCase()),
               OutlinedButton(onPressed: (){},
-              child: Text(LocaleKeys.getStarted.tr().toUpperCase()),
+              child: Text(LocaleKeys.get_started.tr().toUpperCase()),
               )
             ],
           ),

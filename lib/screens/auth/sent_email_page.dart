@@ -9,12 +9,12 @@ class SentEmailPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AuthBasePage(
-        appBarTitle: LocaleKeys.resetPassword.tr(),
-        pageTitle: LocaleKeys.resetPassword,
-        pageSubtitle: LocaleKeys.enterEmailToReset,
+        appBarTitle: LocaleKeys.reset_password.tr(),
+        pageTitle: LocaleKeys.enter_email_to_reset,
+        pageSubtitle: LocaleKeys.enter_email_to_reset,
         centerTitle: false,
         widgets: [
-          PrimaryButton(onPressed: () {}, label: LocaleKeys.sendAgain),
+          PrimaryButton(onPressed: () {}, label: LocaleKeys.send_again),
         ]);
   }
 }

@@ -7,19 +7,19 @@ class VerifyPhoneNumberPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AuthBasePage(
-      appBarTitle: LocaleKeys.signUp,
-      pageTitle: LocaleKeys.getStarted,
-      pageSubtitle: LocaleKeys.enterEmailToReset,
+      appBarTitle: LocaleKeys.sign_up,
+      pageTitle: LocaleKeys.get_started,
+      pageSubtitle: LocaleKeys.enter_email_to_reset,
       centerTitle: true,
       widgets: [
         PrimaryButton(onPressed: () {
           Navigator.pushReplacement(context, MaterialPageRoute(builder: (_)=>const HomePage()));
-        }, label: LocaleKeys.getStarted.tr()),
+        }, label: LocaleKeys.get_started.tr()),
         MySizedBox(height: 24.0),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Text(LocaleKeys.getStarted.tr(),
+            Text(LocaleKeys.get_started.tr(),
                 style: MyTextStyle.regular(size: 12.0)),
             TextButton(onPressed: () {}, child: const Text('Resend again'))
           ],

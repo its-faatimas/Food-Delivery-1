@@ -14,9 +14,9 @@ class SignInPage extends StatelessWidget {
         builder: (ctx, state) {
           SignInCubit cubit = ctx.watch();
           return AuthBasePage(
-              appBarTitle: LocaleKeys.signIn.tr(),
+              appBarTitle: LocaleKeys.sign_in.tr(),
               pageTitle: LocaleKeys.welcome.tr(),
-              pageSubtitle: LocaleKeys.enterYourPhoneOrEmailForSignInOr.tr(),
+              pageSubtitle: LocaleKeys.enter_your_phone_or_email_for_sign_in_or.tr(),
               centerTitle: false,
               widgets: [
                 Form(
@@ -44,7 +44,7 @@ class SignInPage extends StatelessWidget {
                       ),
                       MySizedBox(height: 20.0),
                       Text(
-                        LocaleKeys.forgetPassword.tr(),
+                        LocaleKeys.forgot_password.tr(),
                         style: MyTextStyle.regular(size: 12.0),
                       ),
                       MySizedBox(height: 20.0),
@@ -52,7 +52,7 @@ class SignInPage extends StatelessWidget {
                       // Sign in button
                       PrimaryButton(
                         onPressed: cubit.onPressed,
-                        label: LocaleKeys.signIn.tr(),
+                        label: LocaleKeys.sign_in.tr(),
                       ),
                       MySizedBox(height: 20.0),
 
@@ -66,7 +66,7 @@ class SignInPage extends StatelessWidget {
                           TextButton(
                             onPressed: () {},
                             child: Text(
-                              LocaleKeys.createNewAccount.tr(),
+                              LocaleKeys.create_new_account.tr(),
                             ),
                           )
                         ],

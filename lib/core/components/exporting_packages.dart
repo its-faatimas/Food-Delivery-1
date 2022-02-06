@@ -39,6 +39,5 @@ export 'package:easy_localization/easy_localization.dart';
 export 'package:flutter/services.dart';
 export 'package:foodly/translations/codegen_loader.g.dart';
 export 'package:foodly/translations/locale_keys.g.dart';
-
 // Functions
 export 'package:foodly/core/functions/text_form_field_validator.dart';

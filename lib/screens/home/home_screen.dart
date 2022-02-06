@@ -14,8 +14,8 @@ class HomePage extends StatelessWidget {
       child: BlocBuilder<HomePageCubit, HomePageState>(
         builder: (ctx, state) {
           HomePageCubit cubit = ctx.watch();
-
           return Scaffold(
+            body: cubit.pages[cubit.currentIndex],
             bottomNavigationBar: MyBottomNavigationBar(
               onTap: cubit.onPageChanged,
               currentIndex: cubit.currentIndex,

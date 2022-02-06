@@ -10,16 +10,16 @@ class ForgotPasswordPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AuthBasePage(
-      appBarTitle: LocaleKeys.forgotPassword.tr(),
-      pageTitle: LocaleKeys.forgotPassword,
-      pageSubtitle: LocaleKeys.enterEmailToReset,
+      appBarTitle: LocaleKeys.forgot_password.tr(),
+      pageTitle: LocaleKeys.forgot_password,
+      pageSubtitle: LocaleKeys.enter_email_to_reset,
       centerTitle: false,
       widgets: [
         Form(
           key: _formKey,
           child: MyTextFormField(
             controller: _emailController,
-            hint: LocaleKeys.emailAddress.tr(),
+            hint: LocaleKeys.email.tr(),
             inputType: TextInputType.emailAddress,
             inputAction: TextInputAction.done,
             validator: FormValidator.email,
@@ -37,7 +37,7 @@ class ForgotPasswordPage extends StatelessWidget {
                   ));
             }
           },
-          label: LocaleKeys.resetPassword.tr(),
+          label: LocaleKeys.reset_password.tr(),
         ),
       ],
     );

@@ -10,8 +10,8 @@ class EnteringPhonePage extends StatelessWidget {
     SizeConfig().init(context);
     return AuthBasePage(
       appBarTitle: 'Login to Foodly',
-      pageTitle: LocaleKeys.getStarted,
-      pageSubtitle: LocaleKeys.enterEmailToReset,
+      pageTitle: LocaleKeys.get_started,
+      pageSubtitle: LocaleKeys.enter_email_to_reset,
       centerTitle: true,
       widgets: [
         MyTextFormField(
@@ -24,7 +24,7 @@ class EnteringPhonePage extends StatelessWidget {
               Navigator.push(context,
                   MaterialPageRoute(builder: (_) => const VerifyPhoneNumberPage()));
             },
-            label: LocaleKeys.signUp)
+            label: LocaleKeys.sign_up)
       ],
     );
   }

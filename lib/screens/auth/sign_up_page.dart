@@ -14,9 +14,9 @@ class SignUpPage extends StatelessWidget {
         builder: (ctx, state) {
           SignUpCubit cubit = ctx.watch();
           return AuthBasePage(
-              appBarTitle: LocaleKeys.signUp.tr(),
-              pageTitle: LocaleKeys.createNewAccount,
-              pageSubtitle: LocaleKeys.enterYourPhoneOrEmailForSignInOr,
+              appBarTitle: LocaleKeys.sign_up.tr(),
+              pageTitle: LocaleKeys.create_new_account,
+              pageSubtitle: LocaleKeys.enter_your_phone_or_email_for_sign_in_or,
               centerTitle: false,
               widgets: [
                 Form(
@@ -51,7 +51,7 @@ class SignUpPage extends StatelessWidget {
                 MySizedBox(height: 24.0),
                 PrimaryButton(
                   onPressed: cubit.onPressed,
-                  label: LocaleKeys.signUp.tr().toUpperCase(),
+                  label: LocaleKeys.sign_up.tr().toUpperCase(),
                 ),
                 MySizedBox(height: 24.0),
                 const AllSocialMediaButtons(),

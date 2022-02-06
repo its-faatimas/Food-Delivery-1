@@ -13,7 +13,7 @@ class AllSocialMediaButtons extends StatelessWidget {
         SocialMediaButton(
           onPressed: () {},
           assetIcon: AppIcons.facebookRect,
-          label: LocaleKeys.connectWith.tr(args: ['facebook']).toUpperCase(),
+          label: LocaleKeys.connect_with.tr(args: ['facebook']).toUpperCase(),
         ),
         MySizedBox(height: 16.0),
         // Google Button
@@ -21,7 +21,7 @@ class AllSocialMediaButtons extends StatelessWidget {
           color: AppColors.blue,
           onPressed: () {},
           assetIcon: AppIcons.googleRect,
-          label: LocaleKeys.connectWith.tr(args: ['google']).toUpperCase(),
+          label: LocaleKeys.connect_with.tr(args: ['google']).toUpperCase(),
         ),
       ],
     );

@@ -71,7 +71,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
                 MySizedBox(height: 60.0),
                 PrimaryButton(
                   onPressed: _onButtonPressed,
-                  label: LocaleKeys.getStarted.tr().toUpperCase(),
+                  label: LocaleKeys.get_started.tr().toUpperCase(),
                 ),
               ],
             ),
