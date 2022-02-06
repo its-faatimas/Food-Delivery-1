@@ -101,6 +101,6 @@ class _OnBoardingPageState extends State<OnBoardingPage>
   }
 
   void _onButtonPressed() {
-    navigatorPushReplacement(const ForgotPasswordPage());
+    navigatorPushReplacement(ForgotPasswordPage());
   }
 }

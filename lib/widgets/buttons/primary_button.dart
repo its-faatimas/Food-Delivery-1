@@ -15,7 +15,7 @@ class PrimaryButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return ElevatedButton(
       onPressed: onPressed,
-      child: Text(label),
+      child: Text(label.toUpperCase()),
       style: ElevatedButton.styleFrom(
         fixedSize: Size(MediaQuery.of(context).size.width, getHeight(48.0))
       ),
