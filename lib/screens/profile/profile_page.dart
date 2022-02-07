@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/core/constants/app_screens.dart';
 import 'package:foodly/cubit/profile_cubit/profile_cubit.dart';
 import 'package:foodly/widgets/profile_menu_table.dart';
 
@@ -32,9 +33,11 @@ class ProfilePage extends StatelessWidget {
                 ListView.separated(
                   padding: EdgeInsets.zero,
                   shrinkWrap: true,
+                  itemCount: ProfileSettings.settingsList.length,
                   physics: const NeverScrollableScrollPhysics(),
                   itemBuilder: (c, i) {
-                    return _buildProfileMenuTable();
+                    TableModel table = ProfileSettings.settingsList[i];
+                    return ProfileMenuTable(table: table);
                   },
                   separatorBuilder: (c, i) {
                     return Divider(
@@ -42,7 +45,6 @@ class ProfilePage extends StatelessWidget {
                       indent: getWidth(60.0),
                     );
                   },
-                  itemCount: 6,
                 ),
                 Text(
                   LocaleKeys.notifications.tr().toUpperCase(),
@@ -53,14 +55,6 @@ class ProfilePage extends StatelessWidget {
           );
         },
       ),
-    );
-  }
-
-  ProfileMenuTable _buildProfileMenuTable() {
-    return ProfileMenuTable(
-      assetIcon: AppIcons.profile,
-      title: LocaleKeys.profileInformation.tr(),
-      subtitle: LocaleKeys.change_your_acconut_info.tr(),
     );
   }
 }

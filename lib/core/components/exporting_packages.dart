@@ -21,6 +21,8 @@ export 'package:foodly/widgets/auth_header.dart';
 export 'package:foodly/core/components/size_config.dart';
 export 'package:foodly/core/components/my_box_decoration.dart';
 export 'package:foodly/core/components/my_edge_insets.dart';
+export 'package:foodly/core/components/custom_navigator.dart';
+
 
 // Constants
 export 'package:foodly/core/constants/app_colors.dart';
@@ -41,3 +43,7 @@ export 'package:foodly/translations/codegen_loader.g.dart';
 export 'package:foodly/translations/locale_keys.g.dart';
 // Functions
 export 'package:foodly/core/functions/text_form_field_validator.dart';
+
+// Models
+export 'package:foodly/models/profile_menu_table_model.dart';
+
