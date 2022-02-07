@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/app_screens.dart';
 import 'package:foodly/cubit/profile_cubit/profile_cubit.dart';
+import 'package:foodly/widgets/my_switch_tile.dart';
 import 'package:foodly/widgets/profile_menu_table.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -45,6 +46,21 @@ class ProfilePage extends StatelessWidget {
                   LocaleKeys.notifications.tr().toUpperCase(),
                   style: MyTextStyle.semiBold(size: 16.0),
                 ),
+
+                Text(LocaleKeys.more.tr(),
+                style: MyTextStyle.semiBold(size: 16.0),
+                ),
+                ListView.separated(
+                  padding: EdgeInsets.zero,
+                  shrinkWrap: true,
+                  itemCount: 3,
+                  physics: const NeverScrollableScrollPhysics(),
+                  separatorBuilder: _separated,
+                  itemBuilder: (c, i) {
+
+                    return MySwitchTile(onChanged: (v){});
+                  },
+                )
               ],
             ),
           );
