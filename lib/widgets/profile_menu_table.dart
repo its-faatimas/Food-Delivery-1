@@ -4,10 +4,7 @@ import 'package:foodly/core/components/exporting_packages.dart';
 class ProfileMenuTable extends StatelessWidget {
   final TableModel table;
 
-  const ProfileMenuTable({
-    Key? key,
-    required this.table,
-  }) : super(key: key);
+  const ProfileMenuTable({Key? key, required this.table}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

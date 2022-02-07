@@ -33,23 +33,18 @@ class ProfilePage extends StatelessWidget {
                 ListView.separated(
                   padding: EdgeInsets.zero,
                   shrinkWrap: true,
-                  itemCount: ProfileSettings.settingsList.length,
+                  itemCount: AccountSettings.settingsList.length,
                   physics: const NeverScrollableScrollPhysics(),
+                  separatorBuilder: _separated,
                   itemBuilder: (c, i) {
-                    TableModel table = ProfileSettings.settingsList[i];
+                    TableModel table = AccountSettings.settingsList[i];
                     return ProfileMenuTable(table: table);
-                  },
-                  separatorBuilder: (c, i) {
-                    return Divider(
-                      height: 1.0,
-                      indent: getWidth(60.0),
-                    );
                   },
                 ),
                 Text(
                   LocaleKeys.notifications.tr().toUpperCase(),
                   style: MyTextStyle.semiBold(size: 16.0),
-                )
+                ),
               ],
             ),
           );
@@ -57,4 +52,6 @@ class ProfilePage extends StatelessWidget {
       ),
     );
   }
+
+  Widget _separated(c, i) => Divider(height: 1.0, indent: getWidth(60.0));
 }
