@@ -44,9 +44,10 @@ ThemeData getApplicationTheme() {
     // outlined button theme
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
+        fixedSize: const Size(400.0, 48.0),
         textStyle: AppTextStyle.getMediumStyle(color: AppColors.green),
         primary: AppColors.green,
-        alignment: Alignment.centerLeft,
+        alignment: Alignment.center,
         side: const BorderSide(color: AppColors.green, width: 1.0),
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(10.0),

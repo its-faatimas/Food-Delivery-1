@@ -10,7 +10,7 @@ class ReferPage extends StatelessWidget {
     return Scaffold(
       appBar: SimpleAppBar(title: LocaleKeys.refer_to.tr()),
       body: Padding(
-        padding: MyEdgeInsets.symmetric(h: 44.0),
+        padding: MyEdgeInsets.symmetric(h: 20.0, v: 32.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children:  [
@@ -20,6 +20,10 @@ class ReferPage extends StatelessWidget {
               subtitle: LocaleKeys.enter_your_phone_or_email_for_sign_in_or,
               widget: MyOutlinedButton(onPressed: (){}, label: LocaleKeys.refer_to.tr()),
             ),
+            const Spacer(),
+            PrimaryButton(onPressed: (){}, label: LocaleKeys.email),
+            MySizedBox(height: 20.0),
+            MyOutlinedButton(onPressed: (){}, label: 'Others')
           ],
         ),
       ),

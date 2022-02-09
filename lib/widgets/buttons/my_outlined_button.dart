@@ -12,6 +12,7 @@ class MyOutlinedButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return OutlinedButton(onPressed: onPressed, child: Text(label));
+    return OutlinedButton(onPressed: onPressed, child: Text(label.toUpperCase()),
+    );
   }
 }
