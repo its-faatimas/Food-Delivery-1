@@ -8,7 +8,7 @@ version: 1.0.0+1
 environment:
   sdk: ">=2.15.1 <3.0.0"
 
-
+# Dependencies
 dependencies:
   flutter:
     sdk: flutter
@@ -19,8 +19,8 @@ dependencies:
   flutter_bloc: ^8.0.1
   flutter_svg: ^1.0.3
   easy_localization: ^3.0.0
-  backdrop: ^0.7.1
 
+# Development Dependencies
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -34,13 +34,14 @@ flutter:
 
   uses-material-design: true
 
+  # Assets
   assets:
     - assets/icons/
     - assets/icons/rectangle/
     - assets/illustrations/
     - assets/translations/
 
-
+  # Fonts
   fonts:
     - family: SF-Pro
       fonts:

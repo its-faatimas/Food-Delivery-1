@@ -4,13 +4,13 @@ import 'package:foodly/core/components/exporting_packages.dart';
 class AuthHeader extends StatelessWidget {
   final String title;
   final String subtitle;
-  final bool centerTitle;
+  bool centerTitle;
 
-  const AuthHeader({
+   AuthHeader({
     Key? key,
     required this.title,
     required this.subtitle,
-    required this.centerTitle,
+     this.centerTitle = true,
   }) : super(key: key);
 
   @override

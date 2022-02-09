@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/screens/payment/app_credit_card_page.dart';
 import 'package:foodly/widgets/buttons/my_outlined_button.dart';
 
 class PaymentMethodsPage extends StatelessWidget {
@@ -16,8 +17,10 @@ class PaymentMethodsPage extends StatelessWidget {
           title: LocaleKeys.payment_methods,
           subtitle: LocaleKeys.enter_email_to_reset,
           widget: MyOutlinedButton(
-            onPressed: () {},
-            label: LocaleKeys.add_your_credit,
+            onPressed: () {
+              CustomNavigator().push(AddingCreditCardPage());
+            },
+            label: LocaleKeys.add_your_credit.tr(),
           ),
         ),
       ),

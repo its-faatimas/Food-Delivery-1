@@ -1,7 +1,7 @@
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/screens/settings/adding_social_account_page.dart';
 import 'package:foodly/screens/settings/locations_page.dart';
-import 'package:foodly/screens/settings/payment_methods_page.dart';
+import 'package:foodly/screens/payment/payment_methods_page.dart';
 import 'package:foodly/screens/settings/profile_settings_page.dart';
 import 'package:foodly/screens/settings/refer_page.dart';
 

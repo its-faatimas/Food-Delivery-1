@@ -25,7 +25,7 @@ class ProfilePage extends StatelessWidget {
                     right: 50,
                     bottom: 24.0,
                   ),
-                  child: const AuthHeader(
+                  child:  AuthHeader(
                     title: LocaleKeys.accountSettings,
                     subtitle: LocaleKeys.updateYourSettings,
                     centerTitle: false,

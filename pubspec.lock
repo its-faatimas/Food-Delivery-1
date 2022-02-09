@@ -15,13 +15,6 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "2.8.2"
-  backdrop:
-    dependency: "direct main"
-    description:
-      name: backdrop
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.7.1"
   bloc:
     dependency: "direct main"
     description:

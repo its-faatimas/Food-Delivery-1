@@ -1,4 +1,3 @@
-import 'package:backdrop/backdrop.dart';
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
