@@ -30,6 +30,8 @@ class MySwitchTile extends StatelessWidget {
             ),
             const Spacer(),
             CupertinoSwitch(
+              // trackColor: AppColors.green,
+              activeColor: AppColors.green,
               value: true,
               onChanged: onChanged,
             ),

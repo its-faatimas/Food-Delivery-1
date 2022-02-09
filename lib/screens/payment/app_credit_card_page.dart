@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
-import 'package:foodly/widgets/app_bars/simple_app_bar.dart';
 import 'package:foodly/widgets/buttons/my_outlined_button.dart';
 
 class AddingCreditCardPage extends StatelessWidget {
@@ -40,12 +39,11 @@ class AddingCreditCardPage extends StatelessWidget {
                 ),
               ],
             ),
-
             const Spacer(),
-
-            PrimaryButton(onPressed: (){}, label: LocaleKeys.add_your_credit.tr()),
+            PrimaryButton(
+                onPressed: () {}, label: LocaleKeys.add_your_credit.tr()),
             MySizedBox(height: 16.0),
-            MyOutlinedButton(onPressed: (){}, label: 'scan card'),
+            MyOutlinedButton(onPressed: () {}, label: 'scan card'),
           ],
         ),
       ),

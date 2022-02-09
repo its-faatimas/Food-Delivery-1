@@ -46,4 +46,12 @@ class AccountSettings {
   ];
 
   static List<TableModel> get settingsList => _settingsList;
+
+  static final List<TableModel> _moreList = [
+    TableModel(AppIcons.rating, 'Rate Us', 'Rate Us', AddingSocialAccountPage()),
+    TableModel(AppIcons.document, 'FAQ', 'Frequency asked questions', AddingSocialAccountPage()),
+    TableModel(AppIcons.logout, 'Logout', 'Logout from app', AddingSocialAccountPage()),
+  ];
+
+  static List<TableModel> get moreList => _moreList;
 }
