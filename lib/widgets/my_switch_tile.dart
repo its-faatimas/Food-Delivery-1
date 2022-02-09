@@ -4,6 +4,7 @@ import 'package:foodly/core/components/exporting_packages.dart';
 
 class MySwitchTile extends StatelessWidget {
   final ValueChanged<bool> onChanged;
+
   const MySwitchTile({Key? key, required this.onChanged}) : super(key: key);
 
   @override
@@ -28,8 +29,9 @@ class MySwitchTile extends StatelessWidget {
               ],
             ),
             const Spacer(),
-            CupertinoSwitch(value: true,
-            onChanged: onChanged,
+            CupertinoSwitch(
+              value: true,
+              onChanged: onChanged,
             ),
           ],
         ),

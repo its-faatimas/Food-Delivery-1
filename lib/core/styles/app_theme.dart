@@ -112,15 +112,15 @@ ThemeData getApplicationTheme() {
       errorStyle: AppTextStyle.getRegularStyle(color: AppColors.orange),
 
       // enabled border
-      enabledBorder: _outlineInputBorder(AppColors.border),
+      enabledBorder: _underlineInputBorder(AppColors.border),
 
       // focused border
-      focusedBorder: _outlineInputBorder(AppColors.border),
+      focusedBorder: _underlineInputBorder(AppColors.border),
 
       // error border
-      errorBorder: _outlineInputBorder(AppColors.orange),
+      errorBorder: _underlineInputBorder(AppColors.orange),
       // focused error border
-      focusedErrorBorder: _outlineInputBorder(AppColors.border),
+      focusedErrorBorder: _underlineInputBorder(AppColors.border),
     ),
   );
 }
