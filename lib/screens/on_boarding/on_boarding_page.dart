@@ -50,10 +50,12 @@ class _OnBoardingPageState extends State<OnBoardingPage>
     return Scaffold(
       body: Stack(
         children: [
+
           PageView(
             onPageChanged: cubit.onChanged,
+            // TODO AuthHeaderni o`zgartirish kerak
             children: OnBoardingData.list
-                .map((e) => _setTitleAndSubtitle(e.title, e.subtitle))
+                .map((e) => AuthHeader(title: e.title, subtitle: e.subtitle))
                 .toList(),
           ),
           Positioned(
@@ -80,26 +82,6 @@ class _OnBoardingPageState extends State<OnBoardingPage>
       ),
     );
   }
-
-  Padding _setTitleAndSubtitle(String title, String subtitle) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 20.0),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          MyText(title, style: MyTextStyle.bold(size: 30.0)),
-          MySizedBox(height: 20.0),
-          MyText(
-            subtitle,
-            align: TextAlign.center,
-            style: MyTextStyle.regular(color: AppColors.darkGrey),
-          ),
-          MySizedBox(height: 223.0),
-        ],
-      ),
-    );
-  }
-
   void _onButtonPressed() {
     navigatorPushReplacement(ForgotPasswordPage());
   }

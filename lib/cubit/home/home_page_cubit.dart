@@ -20,7 +20,7 @@ class HomePageCubit extends Cubit<HomePageState> {
   int get currentIndex => _currentIndex;
 
   final List<Widget> _pages = [
-     HomeBody(),
+    const HomeBody(),
     const SearchPage(),
     const OrdersPage(),
     const ProfilePage(),
