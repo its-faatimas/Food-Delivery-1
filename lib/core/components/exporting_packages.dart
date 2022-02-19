@@ -20,6 +20,7 @@ export 'package:foodly/widgets/auth_header.dart';
 export 'package:foodly/widgets/method_info.dart';
 
 export 'package:foodly/widgets/cards/popular_foods_card.dart';
+export 'package:foodly/widgets/cards/food_card_medium.dart';
 
 // Components
 export 'package:foodly/core/components/size_config.dart';
@@ -54,6 +55,7 @@ export 'package:foodly/models/profile_menu_table_model.dart';
 // Extensions
 export 'package:foodly/core/extensions/widget_extension.dart';
 export 'package:foodly/core/extensions/size_extension.dart';
+export 'package:foodly/core/extensions/image_extension.dart';
 
 // Mock Data
 export 'package:foodly/core/mock_data/mock_data.dart';

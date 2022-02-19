@@ -8,7 +8,7 @@ class SeeAllButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: MyEdgeInsets.only(top: 34.0, right: 20.0, left: 20.0),
+      padding: MyEdgeInsets.only(top: 34.0, right: 20.0, left: 20.0, bottom: 24.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

@@ -39,6 +39,7 @@ flutter:
     - assets/icons/
     - assets/icons/rectangle/
     - assets/illustrations/
+    - assets/images/
     - assets/translations/
 
   # Fonts

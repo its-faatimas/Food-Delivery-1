@@ -13,6 +13,15 @@ class HomeBody extends StatelessWidget {
         children: [
           const PopularFoodsCard(),
           const SeeAllButton(title: 'Featured Partners'),
+          SizedBox(
+            height: 254.h,
+            child: ListView.builder(
+              padding: MyEdgeInsets.symmetric(h: 13.0),
+                scrollDirection: Axis.horizontal,
+                itemBuilder: (c, i) {
+              return FoodCardMedium();
+            }),
+          )
         ],
       ),
     );
