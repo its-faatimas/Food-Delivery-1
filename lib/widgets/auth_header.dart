@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
-class AuthHeader extends StatelessWidget {
+class TitleSubtitle extends StatelessWidget {
   final String title;
   final String subtitle;
   bool centerTitle;
 
-   AuthHeader({
+   TitleSubtitle({
     Key? key,
     required this.title,
     required this.subtitle,

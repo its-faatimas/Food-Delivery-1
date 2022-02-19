@@ -13,7 +13,7 @@ class AddingSocialAccountPage extends StatelessWidget {
         child: Column(
           // mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            AuthHeader(
+            TitleSubtitle(
               title: LocaleKeys.add_social,
               subtitle: LocaleKeys.add_or_remove_your_location,
               centerTitle: true,

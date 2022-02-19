@@ -20,7 +20,9 @@ class OrdersPage extends StatelessWidget {
                 padding: MyEdgeInsets.symmetric(h: 20.0),
                 shrinkWrap: true,
                 physics: const NeverScrollableScrollPhysics(),
-                children: const [FoodTile()],
+                children:  const [
+                  FoodTile(),
+                ],
               )
             ],
           );

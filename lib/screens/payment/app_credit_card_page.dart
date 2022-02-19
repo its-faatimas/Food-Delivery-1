@@ -13,7 +13,7 @@ class AddingCreditCardPage extends StatelessWidget {
         padding: MyEdgeInsets.symmetric(h: 20.0, v: 24.0),
         child: Column(
           children: [
-            AuthHeader(
+            TitleSubtitle(
               title: LocaleKeys.add_your_credit,
               subtitle: LocaleKeys.dontHaveAccount,
             ),

@@ -38,5 +38,30 @@ abstract class  LocaleKeys {
   static const get_money_for_ref = 'get_money_for_ref';
   static const notifications = 'notifications';
   static const more = 'more';
+  static const edit = 'edit';
+  static const deliverTo = 'deliverTo';
+  static const upconminOrders = 'upconminOrders';
+  static const clear = 'clear';
+  static const clearAll = 'clearAll';
+  static const pastOrders = 'pastOrders';
+  static const home = 'home';
+  static const search = 'search';
+  static const orders = 'orders';
+  static const profile = 'profile';
+  static const checkout = 'checkout';
+  static const filter = 'filter';
+  static const featuredPartners = 'featuredPartners';
+  static const seeAll = 'seeAll';
+  static const bestPicksRestaurantsbyTeam = 'bestPicksRestaurantsbyTeam';
+  static const allRests = 'allRests';
+  static const rateUs = 'rateUs';
+  static const faq = 'faq';
+  static const faqFull = 'faqFull';
+  static const logout = 'logout';
+  static const pushNotifications = 'pushNotifications';
+  static const forDailyUpdate = 'forDailyUpdate';
+  static const sms_notifications = 'sms_notifications';
+  static const promotionalNotifications = 'promotionalNotifications';
+  static const rateUsStore = 'rateUsStore';
 
 }

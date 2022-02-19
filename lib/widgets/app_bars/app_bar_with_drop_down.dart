@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/screens/filter/filter_page.dart';
 import 'package:foodly/widgets/buttons/custom_text_button.dart';
 
 class AppBarWithDropDown extends StatelessWidget with PreferredSizeWidget {
@@ -20,9 +21,18 @@ class AppBarWithDropDown extends StatelessWidget with PreferredSizeWidget {
           _buildDropdownButtonHideUnderline()
         ],
       ),
-
       actions: [
-        CustomTextButton(onPressed: (){}, label: 'Filter').translate(y: 12.h)
+        CustomTextButton(
+          onPressed: () {
+            showGeneralDialog(
+                transitionDuration: const Duration(milliseconds: 300),
+                context: context,
+                pageBuilder: (_, __, ___) {
+                  return const FilterPage();
+                });
+          },
+          label: LocaleKeys.filter.tr(),
+        ).translate(y: 12.h)
       ],
     );
   }

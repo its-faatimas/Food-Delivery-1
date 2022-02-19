@@ -20,10 +20,10 @@ class MyBottomNavigationBar extends StatelessWidget {
       onTap: onTap,
       currentIndex: currentIndex,
       items: [
-        _setItem(AppIcons.food, 'Home', 0),
-        _setItem(AppIcons.search, 'Search', 1),
-        _setItem(AppIcons.order, 'Orders', 2),
-        _setItem(AppIcons.profile, 'Profile', 3),
+        _setItem(AppIcons.food, LocaleKeys.home.tr(), 0),
+        _setItem(AppIcons.search, LocaleKeys.search.tr(), 1),
+        _setItem(AppIcons.order, LocaleKeys.orders.tr(), 2),
+        _setItem(AppIcons.profile, LocaleKeys.profile.tr(), 3),
       ],
     );
   }

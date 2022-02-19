@@ -27,14 +27,15 @@ class HomePageCubit extends Cubit<HomePageState> {
     const ProfilePage(),
   ];
 
-  final List<PreferredSizeWidget> _appBars =[
+  final List _appBars =[
     const AppBarWithDropDown(),
     SimpleAppBar(title: LocaleKeys.send_again.tr()),
     SimpleAppBar(title: LocaleKeys.password.tr()),
-    SimpleAppBar(title: LocaleKeys.profileInformation.tr()),
+    null,
+    // SimpleAppBar(title: LocaleKeys.profileInformation.tr()),
   ];
 
   List<Widget> get pages => _pages;
 
-  List<PreferredSizeWidget> get appBars => _appBars;
+  List get appBars => _appBars;
 }

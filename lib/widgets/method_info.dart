@@ -19,7 +19,7 @@ class MethodInfo extends StatelessWidget {
     return Column(
       children: [
         SvgPicture.asset(illustration),
-        AuthHeader(title: title, subtitle: subtitle, centerTitle: true),
+        TitleSubtitle(title: title, subtitle: subtitle, centerTitle: true),
         MySizedBox(height: 6.0),
         widget,
       ],

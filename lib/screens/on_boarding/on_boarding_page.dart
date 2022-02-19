@@ -84,7 +84,7 @@ class _OnBoardingPageState extends State<OnBoardingPage>
       Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
-          AuthHeader(title: e.title, subtitle: e.subtitle),
+          TitleSubtitle(title: e.title, subtitle: e.subtitle),
           MySizedBox(height: 199.0),
         ],
       );
