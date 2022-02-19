@@ -4,11 +4,15 @@ import 'package:foodly/core/components/exporting_packages.dart';
 class PageIndicator extends StatelessWidget {
   final int len;
   final int currentIndex;
+  Color activeColor;
+  Color inActiveColor;
 
-  const PageIndicator({
+  PageIndicator({
     Key? key,
     required this.len,
     required this.currentIndex,
+    this.activeColor = AppColors.green,
+    this.inActiveColor = AppColors.grey,
   }) : super(key: key);
 
   @override
@@ -24,7 +28,7 @@ class PageIndicator extends StatelessWidget {
         height: getHeight(5.0),
         width: getWidth(8.0),
         decoration: MyDecoration.circular(
-          color: currentIndex == index ? AppColors.green : AppColors.grey,
+          color: currentIndex == index ? activeColor : inActiveColor,
         ),
       );
 }

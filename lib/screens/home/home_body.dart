@@ -6,6 +6,14 @@ class HomeBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    return SingleChildScrollView(
+      padding: MyEdgeInsets.symmetric(v: 24.0),
+      child: Column(
+        children: [
+          const PopularFoodsCard(),
+
+        ],
+      ),
+    );
   }
 }

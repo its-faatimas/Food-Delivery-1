@@ -10,4 +10,13 @@ class MyDecoration {
         color: color,
         borderRadius: BorderRadius.circular(getWidth(radius)),
       );
+
+  static BoxDecoration networkImage({
+    required String img,
+    double radius = 6.0,
+  }) =>
+      BoxDecoration(
+        borderRadius: BorderRadius.circular(radius.w),
+        image: DecorationImage(fit: BoxFit.cover, image: NetworkImage(img)),
+      );
 }
