@@ -24,7 +24,7 @@ class FoodCardMedium extends StatelessWidget {
             Text('Daylight Coffee', style: MyTextStyle.medium(size: 20.0)),
             SizedBox(height: 2.h),
             Text(
-              'Daylight Coffee',
+              'Colarodo, San Francisco',
               style: MyTextStyle.regular(size: 16.0, color: AppColors.darkGrey),
             ),
             SizedBox(height: 10.h),

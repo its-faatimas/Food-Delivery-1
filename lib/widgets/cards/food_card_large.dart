@@ -30,6 +30,8 @@ class FoodCardLarge extends StatelessWidget {
             ],
           ),
           SizedBox(height: 9.h),
+
+          // Restoran reytingi, yetkazib berish narxlari yoziladi
           Row(
             children: [
               _setSmallText('4.5'),
@@ -46,31 +48,28 @@ class FoodCardLarge extends StatelessWidget {
     );
   }
 
-
+  // Restoran menu'si haqida qisqacha ma'lumotlar tekstlari uchun
   Text _setText(String text) => Text(
         text,
-        style: MyTextStyle.regular(size: 16.0),
+        style: MyTextStyle.regular(size: 16.0, color: AppColors.darkGrey),
       );
 
+  // Restoran reytingi, yetkazib berish narxlari uchun
   Text _setSmallText(String text) => Text(
         text,
         style: MyTextStyle.medium(size: 12.0),
       );
 
-  Row _setTextIcon(String assetIcon, String text)=> Row(
-    children: [
-      _setIcon(assetIcon: assetIcon, color: AppColors.darkGrey),
-      SizedBox(width: 6.w),
-      _setSmallText(text)
-    ],
-  );
-
-  SvgPicture _setIcon({
-    required String assetIcon,
-    Color? color,
-  }) =>
-      SvgPicture.asset(
-        assetIcon,
-        color: color,
+  // Uchinchi qatordagi tekstli ikonlar uchun
+  Row _setTextIcon(String assetIcon, String text) => Row(
+        children: [
+          _setIcon(assetIcon: assetIcon, color: AppColors.darkGrey),
+          SizedBox(width: 6.w),
+          _setSmallText(text)
+        ],
       );
+
+  // Iconlar uchun
+  SvgPicture _setIcon({required String assetIcon, Color? color}) =>
+      SvgPicture.asset(assetIcon, color: color);
 }

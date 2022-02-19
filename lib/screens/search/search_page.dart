@@ -12,7 +12,15 @@ class SearchPage extends StatelessWidget {
       create: (_) => SearchCubit(),
       child: BlocBuilder<SearchCubit, SearchState>(
         builder: (ctx, state) {
-          return Container();
+          return Container(
+            alignment: Alignment.center,
+            child: Text("Hello",
+
+            style: TextStyle(
+              fontSize: SizeConfig.safeBlockHorizontal * 12.0
+
+            ),),
+          );
         },
       ),
     );

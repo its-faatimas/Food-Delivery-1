@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/cubit/orders_cubit/orders_cubit.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/widgets/tiles/food_tile.dart';
 
 class OrdersPage extends StatelessWidget {
   const OrdersPage({Key? key}) : super(key: key);
@@ -12,46 +13,19 @@ class OrdersPage extends StatelessWidget {
       child: BlocBuilder<OrdersCubit, OrdersState>(
         builder: (ctx, state) {
           OrdersCubit cubit = ctx.watch();
-          return Container(
-            alignment: Alignment.center,
-            child: PrimaryButton(
-              onPressed: () {
-                name(context);
-              },
-              label: 'Dialog',
-            ),
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              ListView(
+                padding: MyEdgeInsets.symmetric(h: 20.0),
+                shrinkWrap: true,
+                physics: const NeverScrollableScrollPhysics(),
+                children: const [FoodTile()],
+              )
+            ],
           );
         },
       ),
     );
-  }
-
-  void name(BuildContext context) {
-    showDialog(
-        context: context,
-        builder: (_) => AlertDialog(
-              content: Stack(
-                clipBehavior: Clip.none,
-                children: [
-                  Container(
-                    height: getHeight(306.0),
-                    width: getWidth(317.0),
-                    margin: MyEdgeInsets.only(top: 32.0),
-                    decoration: MyDecoration.circular(
-                      color: AppColors.white,
-                      radius: 32.0,
-                    ),
-                  ),
-
-                  Positioned(
-                  left: 0.0,
-                  right: 0.0,
-                  top: -32.0,
-                  child: FloatingActionButton(
-                    onPressed: (){},
-                  ))
-                ],
-              ),
-            ));
   }
 }
