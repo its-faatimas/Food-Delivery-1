@@ -9,9 +9,7 @@ class ProfileMenuTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: () {
-        CustomNavigator().push(table.screen);
-      },
+      onTap: _onTap,
       child: Padding(
         padding: MyEdgeInsets.symmetric(h: 20.0, v: 16.0),
         child: Row(
@@ -36,4 +34,8 @@ class ProfileMenuTile extends StatelessWidget {
       ),
     );
   }
+
+  void _onTap() {
+      CustomNavigator().push(table.screen);
+    }
 }

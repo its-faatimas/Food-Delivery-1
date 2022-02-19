@@ -60,5 +60,6 @@ export 'package:foodly/core/extensions/widget_extension.dart';
 export 'package:foodly/core/extensions/size_extension.dart';
 export 'package:foodly/core/extensions/image_extension.dart';
 
+
 // Mock Data
 export 'package:foodly/core/mock_data/mock_data.dart';

@@ -106,7 +106,7 @@ class ProfilePage extends StatelessWidget {
         ],
       );
 
-  _setCategory(String text) => Padding(
+  Padding _setCategory(String text) => Padding(
         padding: MyEdgeInsets.only(top: 28.0, left: 20.0, bottom: 12.0),
         child: Text(
           text.toUpperCase(),

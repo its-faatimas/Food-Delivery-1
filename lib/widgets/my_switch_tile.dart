@@ -17,10 +17,7 @@ class MySwitchTile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return InkWell(
-      onTap: (){
-        onChanged.call(isSwitched);
-      },
-
+      onTap: _onTap,
       child: Padding(
         padding: MyEdgeInsets.symmetric(h: 20.0, v: 16.0),
         child: Row(
@@ -49,5 +46,9 @@ class MySwitchTile extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  void _onTap() {
+    onChanged.call(isSwitched);
   }
 }
