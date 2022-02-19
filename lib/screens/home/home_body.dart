@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/widgets/buttons/see_all_button.dart';
 
 class HomeBody extends StatelessWidget {
   const HomeBody({Key? key}) : super(key: key);
@@ -11,7 +12,7 @@ class HomeBody extends StatelessWidget {
       child: Column(
         children: [
           const PopularFoodsCard(),
-
+          const SeeAllButton(title: 'Featured Partners'),
         ],
       ),
     );
