@@ -43,7 +43,7 @@ export 'package:flutter/services.dart';
 export 'package:foodly/translations/codegen_loader.g.dart';
 export 'package:foodly/translations/locale_keys.g.dart';
 // Functions
-export 'package:foodly/core/functions/text_form_field_validator.dart';
+export 'package:foodly/core/components/text_form_field_validator.dart';
 
 // Models
 export 'package:foodly/models/profile_menu_table_model.dart';
