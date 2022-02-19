@@ -21,7 +21,7 @@ class PopularFoodsCard extends StatelessWidget {
                   );
                 }),
           ),
-        ).sp(v: 0.0),
+        ),
         Positioned(
           bottom: 16.h,
           right: 40.w,
