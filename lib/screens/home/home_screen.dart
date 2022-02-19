@@ -16,6 +16,7 @@ class HomePage extends StatelessWidget {
         builder: (ctx, state) {
           HomePageCubit cubit = ctx.watch();
           return Scaffold(
+            appBar: cubit.appBars[cubit.currentIndex],
             body: cubit.pages[cubit.currentIndex],
             bottomNavigationBar: MyBottomNavigationBar(
               onTap: cubit.onPageChanged,

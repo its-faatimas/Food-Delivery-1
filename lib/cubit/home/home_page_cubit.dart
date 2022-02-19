@@ -1,5 +1,6 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/screens/home/home_body.dart';
 import 'package:foodly/screens/orders/orders_page.dart';
 import 'package:foodly/screens/profile/profile_page.dart';
@@ -26,5 +27,14 @@ class HomePageCubit extends Cubit<HomePageState> {
     const ProfilePage(),
   ];
 
+  final List<PreferredSizeWidget> _appBars =[
+    const AppBarWithDropDown(),
+    SimpleAppBar(title: LocaleKeys.send_again.tr()),
+    SimpleAppBar(title: LocaleKeys.password.tr()),
+    SimpleAppBar(title: LocaleKeys.profileInformation.tr()),
+  ];
+
   List<Widget> get pages => _pages;
+
+  List<PreferredSizeWidget> get appBars => _appBars;
 }

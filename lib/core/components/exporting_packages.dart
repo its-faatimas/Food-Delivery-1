@@ -7,10 +7,11 @@ export 'package:foodly/screens/auth/sign_up_page.dart';
 export 'package:foodly/screens/auth/auth_base_page.dart';
 
 // Widgets
+export 'package:foodly/widgets/app_bars/simple_app_bar.dart';
+export 'package:foodly/widgets/app_bars/app_bar_with_drop_down.dart';
 export 'package:foodly/widgets/page_indicator.dart';
 export 'package:foodly/widgets/text/my_text.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
-export 'package:foodly/widgets/app_bars/simple_app_bar.dart';
 export 'package:foodly/widgets/my_text_form_field.dart';
 export 'package:foodly/widgets/buttons/my_icon_button.dart';
 export 'package:foodly/widgets/buttons/primary_button.dart';
@@ -47,4 +48,8 @@ export 'package:foodly/core/components/text_form_field_validator.dart';
 
 // Models
 export 'package:foodly/models/profile_menu_table_model.dart';
+
+// Extensions
+export 'package:foodly/core/extensions/widget_extension.dart';
+export 'package:foodly/core/extensions/size_extension.dart';
 
