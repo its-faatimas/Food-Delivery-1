@@ -14,7 +14,7 @@ extension PaddingExtension on Widget {
 
   SliverToBoxAdapter toSliver() => SliverToBoxAdapter(child: this);
 
-  InkWell onTap({required VoidCallback onTap}) => InkWell(
+  InkWell onTap(VoidCallback onTap) => InkWell(
     child: this,
     onTap: onTap,
   );

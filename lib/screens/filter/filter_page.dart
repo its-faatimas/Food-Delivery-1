@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/screens/filter/body/sort_body.dart';
+import 'package:foodly/screens/filter/body/type_body.dart';
 import 'package:foodly/widgets/app_bars/filter_page_app_bar.dart';
 
 class FilterPage extends StatefulWidget {
@@ -25,13 +27,14 @@ class _FilterPageState extends State<FilterPage> with TickerProviderStateMixin {
       backgroundColor: Colors.transparent,
       body: Container(
         height: 360.h,
+        padding: MyEdgeInsets.only(top: 24.0),
         color: AppColors.white,
         child: Column(
           children: [
             Expanded(
               child: TabBarView(controller: _tabController, children: const [
-                Center(child: Text('Type')),
-                Center(child: Text('Sort by')),
+                FilterTypeBody(),
+                FilterSortBy(),
                 Center(child: Text('Price')),
                 Center(child: Text('Dietary')),
               ]),
