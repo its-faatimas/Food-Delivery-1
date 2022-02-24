@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/screens/filter/body/price_body.dart';
 import 'package:foodly/screens/filter/body/sort_body.dart';
 import 'package:foodly/screens/filter/body/type_body.dart';
 import 'package:foodly/widgets/app_bars/filter_page_app_bar.dart';
@@ -35,7 +36,7 @@ class _FilterPageState extends State<FilterPage> with TickerProviderStateMixin {
               child: TabBarView(controller: _tabController, children: const [
                 FilterTypeBody(),
                 FilterSortBy(),
-                Center(child: Text('Price')),
+                FilterPriceBody(),
                 Center(child: Text('Dietary')),
               ]),
             ),

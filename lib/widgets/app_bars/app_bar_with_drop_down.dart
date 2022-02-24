@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/screens/filter/filter_page.dart';
-import 'package:foodly/widgets/buttons/custom_text_button.dart';
 
 class AppBarWithDropDown extends StatelessWidget with PreferredSizeWidget {
   const AppBarWithDropDown({Key? key}) : super(key: key);
@@ -17,8 +16,8 @@ class AppBarWithDropDown extends StatelessWidget with PreferredSizeWidget {
           Text(
             LocaleKeys.send_again.tr().toUpperCase(),
             style: MyTextStyle.medium(size: 12.0, color: AppColors.green),
-          ).translate(y: 12.h),
-          _buildDropdownButtonHideUnderline()
+          ).translate(y: 20.h),
+          _buildDropdownButtonHideUnderline().translate(y: 12.h),
         ],
       ),
       actions: [
@@ -32,7 +31,7 @@ class AppBarWithDropDown extends StatelessWidget with PreferredSizeWidget {
                 });
           },
           label: LocaleKeys.filter.tr(),
-        ).translate(y: 12.h)
+        ).translate(y: 12.h),
       ],
     );
   }
@@ -56,6 +55,5 @@ class AppBarWithDropDown extends StatelessWidget with PreferredSizeWidget {
       DropdownMenuItem(value: city, child: Text(city));
 
   @override
-  // TODO: implement preferredSize
   Size get preferredSize => Size(double.infinity, 70.h);
 }
