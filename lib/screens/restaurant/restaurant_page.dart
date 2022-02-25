@@ -15,7 +15,9 @@ class RestaurantPage extends StatelessWidget {
           return Scaffold(
             body: CustomScrollView(
               slivers: [
-                RestaurantAppBar(),
+                const RestaurantAppBar(),
+               TitleText(title: 'Mayfield Bakery & Cafe').toSliver(),
+                FoodTypeInfo().toSliver()
               ],
             ),
           );

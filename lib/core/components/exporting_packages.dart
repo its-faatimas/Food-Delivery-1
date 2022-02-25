@@ -17,6 +17,7 @@ export 'package:foodly/widgets/page_indicator.dart';
 export 'package:foodly/widgets/text/my_text.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
 export 'package:foodly/widgets/my_text_form_field.dart';
+export 'package:foodly/widgets/food_type_info.dart';
 
 export 'package:foodly/widgets/buttons/my_icon_button.dart';
 export 'package:foodly/widgets/buttons/primary_button.dart';
