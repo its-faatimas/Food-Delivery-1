@@ -6,11 +6,11 @@ class TitleSubtitle extends StatelessWidget {
   final String subtitle;
   bool centerTitle;
 
-   TitleSubtitle({
+  TitleSubtitle({
     Key? key,
     required this.title,
     required this.subtitle,
-     this.centerTitle = true,
+    this.centerTitle = true,
   }) : super(key: key);
 
   @override
@@ -19,10 +19,7 @@ class TitleSubtitle extends StatelessWidget {
       crossAxisAlignment:
           centerTitle ? CrossAxisAlignment.center : CrossAxisAlignment.start,
       children: [
-        Text(
-          title.tr(),
-          style: MyTextStyle.semiBold(size: centerTitle ? 24.0 : 34.0),
-        ),
+        TitleText(title: title, size: centerTitle ? 24.0 : 34.0),
         MySizedBox(height: 20.0),
         Text(
           subtitle.tr(),

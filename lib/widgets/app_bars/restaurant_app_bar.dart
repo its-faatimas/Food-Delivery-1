@@ -18,7 +18,11 @@ class RestaurantAppBar extends StatelessWidget with PreferredSizeWidget {
     );
   }
 
-  MyIconButton _buildMyIconButton(String assetIcon) => MyIconButton(onPressed: (){}, assetIcon: assetIcon, color: AppColors.white);
+  MyIconButton _buildMyIconButton(String assetIcon) => MyIconButton(
+        onPressed: () {},
+        assetIcon: assetIcon,
+        color: AppColors.white,
+      );
 
   @override
   Size get preferredSize => Size(double.infinity, 56.h);

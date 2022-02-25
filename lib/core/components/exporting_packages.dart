@@ -23,8 +23,9 @@ export 'package:foodly/widgets/buttons/primary_button.dart';
 export 'package:foodly/widgets/buttons/custom_text_button.dart';
 export 'package:foodly/widgets/buttons/all_social_media_buttons.dart';
 
-export 'package:foodly/widgets/auth_header.dart';
+export 'package:foodly/widgets/text/title_subtitle.dart';
 export 'package:foodly/widgets/method_info.dart';
+export 'package:foodly/widgets/text/title_text.dart';
 
 export 'package:foodly/widgets/cards/popular_foods_card.dart';
 export 'package:foodly/widgets/cards/food_card_medium.dart';
