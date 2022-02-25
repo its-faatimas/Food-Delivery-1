@@ -44,6 +44,7 @@ export 'package:foodly/widgets/text/my_text_style.dart';
 export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:easy_localization/easy_localization.dart';
+export 'package:get_storage/get_storage.dart';
 
 // Others
 export 'package:flutter/services.dart';

@@ -62,6 +62,7 @@ class FilterPriceBody extends StatelessWidget {
   SizedBox _showPriceRange() => SizedBox(
         height: 64.h,
         child: ListView.builder(
+          padding: MyEdgeInsets.symmetric(h:12.0 ),
             itemCount: 6,
             scrollDirection: Axis.horizontal,
             itemBuilder: (_, __) => _setPriceRange(__)),

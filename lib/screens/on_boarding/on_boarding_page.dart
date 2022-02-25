@@ -89,7 +89,8 @@ class _OnBoardingPageState extends State<OnBoardingPage>
         ],
       );
 
-  void _onButtonPressed() {
+  void _onButtonPressed() async{
+    await GetStorage().write('hasStarted', true);
     navigatorPushReplacement(ForgotPasswordPage());
   }
 }

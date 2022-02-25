@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:flutter/material.dart';
-import 'package:foodly/core/components/custom_navigator.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
 class SplashScreenPage extends StatefulWidget {
@@ -12,11 +11,17 @@ class SplashScreenPage extends StatefulWidget {
 }
 
 class _SplashScreenPageState extends State<SplashScreenPage> {
+  late bool _hasStarted;
+
   @override
   void initState() {
     super.initState();
+
+    _hasStarted = GetStorage().read('hasStarted') ?? false;
     Timer(const Duration(seconds: 1), () {
-      navigatorPushReplacement(const OnBoardingPage());
+      navigatorPushReplacement(
+        _hasStarted ? const HomePage() : const OnBoardingPage(),
+      );
     });
   }
 

@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/styles/app_theme.dart';
+import 'package:foodly/screens/on_boarding/splash_screen_page.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
+  await GetStorage.init();
   runApp(
     EasyLocalization(
       supportedLocales: const [
@@ -37,7 +39,7 @@ class MyApp extends StatelessWidget {
       localizationsDelegates: context.localizationDelegates,
       supportedLocales: context.supportedLocales,
       locale: context.locale,
-      home: const HomePage(),
+      home: const SplashScreenPage(),
     );
   }
 }
