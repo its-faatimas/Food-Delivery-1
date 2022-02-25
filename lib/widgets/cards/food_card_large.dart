@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/screens/restaurant/restaurant_page.dart';
 import 'package:foodly/widgets/dot.dart';
 
 class FoodCardLarge extends StatelessWidget {
@@ -45,7 +46,9 @@ class FoodCardLarge extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ).onTap(() {
+      CustomNavigator().push(const RestaurantPage());
+    });
   }
 
   // Restoran menu'si haqida qisqacha ma'lumotlar tekstlari uchun

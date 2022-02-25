@@ -12,7 +12,13 @@ class RestaurantPage extends StatelessWidget {
       child: BlocBuilder<RestaurantCubit, RestaurantState>(
         builder: (ctx, state) {
           RestaurantCubit cubit = ctx.watch();
-          return Scaffold();
+          return Scaffold(
+            body: CustomScrollView(
+              slivers: [
+                RestaurantAppBar(),
+              ],
+            ),
+          );
         },
       ),
     );
