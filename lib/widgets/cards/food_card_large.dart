@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/screens/restaurant/restaurant_page.dart';
 import 'package:foodly/widgets/dot.dart';
+import 'package:foodly/widgets/rating_info.dart';
 
 class FoodCardLarge extends StatelessWidget {
   const FoodCardLarge({Key? key}) : super(key: key);
@@ -35,9 +36,7 @@ class FoodCardLarge extends StatelessWidget {
           // Restoran reytingi, yetkazib berish narxlari yoziladi
           Row(
             children: [
-              _setSmallText('4.5'),
-              _setIcon(assetIcon: AppIcons.rating).sp(v: 0.0, h: 4.5),
-              _setSmallText('200+ Ratings'),
+              RatingInfo(),
               SizedBox(width: 13.w),
               _setTextIcon(AppIcons.clock, '25 Min'),
               Dot().sp(v: 0.0, h: 9.5),
