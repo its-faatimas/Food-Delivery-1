@@ -13,7 +13,6 @@ class FoodTile extends StatelessWidget {
       decoration: MyDecoration.circular(radius: 8.0, color: AppColors.white),
       child: Row(
         children: [
-
           // Image
           Image.network(
             MockData.ingFood,
@@ -51,7 +50,9 @@ class FoodTile extends StatelessWidget {
           ),
         ],
       ),
-    );
+    ).onTap(() {
+      CustomNavigator().push(AddingToOrdersPage());
+    });
   }
 
   Text _buildText({required String text, Color color = AppColors.darkGrey}) {

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/cubit/restaurant_cubit/restaurant_cubit.dart';
 import 'package:foodly/widgets/buttons/my_outlined_button.dart';

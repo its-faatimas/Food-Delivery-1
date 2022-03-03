@@ -20,6 +20,7 @@ class AddingCreditCardPage extends StatelessWidget {
             MyTextFormField(
               controller: TextEditingController(),
               hint: 'XXXX XXXX XXXX XXXX',
+              inputType: TextInputType.number,
             ),
             MySizedBox(height: 16.0),
             Row(
@@ -28,6 +29,7 @@ class AddingCreditCardPage extends StatelessWidget {
                   child: MyTextFormField(
                     controller: TextEditingController(),
                     hint: 'MM/YY',
+                    inputType: TextInputType.number,
                   ),
                 ),
                 MySizedBox(width: 16.0),
@@ -35,6 +37,7 @@ class AddingCreditCardPage extends StatelessWidget {
                   child: MyTextFormField(
                     controller: TextEditingController(),
                     hint: 'CVC',
+                    inputType: TextInputType.number,
                   ),
                 ),
               ],

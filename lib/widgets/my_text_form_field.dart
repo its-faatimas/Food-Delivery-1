@@ -11,7 +11,6 @@ class MyTextFormField extends StatelessWidget {
   Widget? suffix;
   TextCapitalization capitalization;
   FormFieldValidator<String>? validator;
-
   MyTextFormField({
     Key? key,
     required this.controller,
