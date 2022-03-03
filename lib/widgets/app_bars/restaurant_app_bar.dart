@@ -10,7 +10,10 @@ class RestaurantAppBar extends StatelessWidget with PreferredSizeWidget {
       iconTheme: const IconThemeData(color: AppColors.white),
       toolbarHeight: 44.h,
       expandedHeight: 240.h,
-      flexibleSpace: const FlexibleSpaceBar(background: FoodImagePageView()),
+      flexibleSpace: const FlexibleSpaceBar(
+        background: FoodImagePageView(),
+        stretchModes: [StretchMode.zoomBackground],
+      ),
       actions: [
         _buildMyIconButton(AppIcons.share),
         _buildMyIconButton(AppIcons.search),

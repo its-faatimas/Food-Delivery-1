@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/cubit/restaurant_cubit/restaurant_cubit.dart';
 import 'package:foodly/widgets/buttons/my_outlined_button.dart';
 import 'package:foodly/widgets/cards/food_card_small.dart';
 import 'package:foodly/widgets/delivery_info_widget.dart';
 import 'package:foodly/widgets/rating_info.dart';
+import 'package:foodly/widgets/tiles/food_tile.dart';
 
 class RestaurantPage extends StatelessWidget {
   const RestaurantPage({Key? key}) : super(key: key);
@@ -24,6 +26,8 @@ class RestaurantPage extends StatelessWidget {
                 _showFoodInfo().toSliver(),
                 _showFeaturedItems().toSliver(),
                 _showCategoryList().toSliver(),
+                _showPopularFoods('Most Populars').toSliver(),
+                _showPopularFoods('Sea Foods').toSliver(),
               ],
             ),
           );
@@ -70,24 +74,44 @@ class RestaurantPage extends StatelessWidget {
       );
 
   SizedBox _showFeaturedItems() => SizedBox(
-        height: 243.h,
+        height: 227.h,
         child: ListView.builder(
             itemCount: 15,
-            padding: MyEdgeInsets.only(
-                left: 13.0, right: 13.0, top: 18.0, bottom: 34.0),
+            padding: MyEdgeInsets.symmetric(h: 13.0, v: 18.0),
             scrollDirection: Axis.horizontal,
             itemBuilder: (ctx, index) {
               return const FoodCardSmall();
             }),
       );
 
+  // TODO: Category List'ni rang va o'lchamini to'g'rilash kerak.
   Widget _showCategoryList() => SizedBox(
-        height: 60.h,
+        height: 32.h,
         child: ListView.builder(
+            padding: MyEdgeInsets.symmetric(h: 14.0),
             scrollDirection: Axis.horizontal,
             itemCount: 15,
             itemBuilder: (ctx, index) {
               return CustomTextButton(onPressed: () {}, label: 'label $index');
             }),
       );
+
+  Widget _showPopularFoods(String categoryName) => Column(
+    crossAxisAlignment: CrossAxisAlignment.start,
+    children: [
+      TitleText(title: categoryName).sp(v: 24.0),
+      ListView.separated(
+            itemCount: 3,
+            padding: MyEdgeInsets.symmetric(h: 20.0),
+            shrinkWrap: true,
+            physics: const NeverScrollableScrollPhysics(),
+            separatorBuilder: _separated,
+            itemBuilder: (ctx, index) => const FoodTile(),
+          ),
+    ],
+  );
+
+  Widget _separated(ctx, index) {
+    return Divider(height: 40.h);
+  }
 }
