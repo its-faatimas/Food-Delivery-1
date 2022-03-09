@@ -7,7 +7,6 @@ class EnteringPhonePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return AuthBasePage(
       appBarTitle: 'Login to Foodly',
       pageTitle: LocaleKeys.get_started,

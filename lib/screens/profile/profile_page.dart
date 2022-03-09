@@ -116,5 +116,5 @@ class ProfilePage extends StatelessWidget {
 
   Widget _separated(c, i) => _divider();
 
-  Divider _divider() => Divider(height: 1.0, indent: getWidth(60.0));
+  Divider _divider() => Divider(height: 1.h, indent: 60.w);
 }

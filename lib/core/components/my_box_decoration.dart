@@ -8,7 +8,7 @@ class MyDecoration {
   }) =>
       BoxDecoration(
         color: color,
-        borderRadius: BorderRadius.circular(getWidth(radius)),
+        borderRadius: BorderRadius.circular(radius.r),
       );
 
   static BoxDecoration networkImage({

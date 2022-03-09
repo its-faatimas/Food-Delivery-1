@@ -30,9 +30,9 @@ ThemeData getApplicationTheme() {
         iconTheme: const IconThemeData(color: AppColors.dark),
         shadowColor: AppColors.darkGrey,
         systemOverlayStyle: SystemUiOverlayStyle.dark,
-        titleTextStyle: AppTextStyle.getSemiBoldStyle(
+        titleTextStyle: AppTextStyle.semiBold(
           color: AppColors.dark,
-          fontSize: 16.0,
+          size: 16.sp,
         )),
     // Button theme
     buttonTheme: ButtonThemeData(
@@ -44,13 +44,13 @@ ThemeData getApplicationTheme() {
     // outlined button theme
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
-        fixedSize: const Size(400.0, 48.0),
+        fixedSize: Size(375.w, 48.h),
         textStyle: AppTextStyle.getMediumStyle(color: AppColors.green),
         primary: AppColors.green,
         alignment: Alignment.center,
-        side: const BorderSide(color: AppColors.green, width: 1.0),
+        side: BorderSide(color: AppColors.green, width: 1.w),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(10.0),
+          borderRadius: BorderRadius.circular(10.r),
         ),
       ),
     ),
@@ -63,9 +63,9 @@ ThemeData getApplicationTheme() {
         elevation: 0.0,
         textStyle: AppTextStyle.getButtonStyle(),
         primary: AppColors.green,
-        fixedSize: const Size(335.0, 48.0),
+        fixedSize: Size(335.w, 48.h),
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.circular(8.0),
+          borderRadius: BorderRadius.circular(8.r),
         ),
       ),
     ),
@@ -73,27 +73,21 @@ ThemeData getApplicationTheme() {
     textButtonTheme: TextButtonThemeData(
       style: TextButton.styleFrom(
         primary: AppColors.green,
-        textStyle: const TextStyle(fontSize: 12.0),
+        textStyle: TextStyle(fontSize: 12.sp),
       ),
     ),
 
     // Text theme
     textTheme: TextTheme(
-      headline1:
-          AppTextStyle.getSemiBoldStyle(color: AppColors.dark, fontSize: 14.0),
-      headline2:
-          AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 14.0),
-      headline3:
-          AppTextStyle.getBoldStyle(color: AppColors.dark, fontSize: 24.0),
-      headline4:
-          AppTextStyle.getRegularStyle(color: AppColors.dark, fontSize: 14.0),
-      subtitle1:
-          AppTextStyle.getMediumStyle(color: AppColors.dark, fontSize: 14.0),
-      subtitle2:
-          AppTextStyle.getMediumStyle(color: AppColors.dark, fontSize: 14.0),
-      bodyText1: AppTextStyle.getRegularStyle(color: AppColors.dark),
+      headline1: AppTextStyle.semiBold(color: AppColors.dark, size: 14.0),
+      headline2: AppTextStyle.regular(color: AppColors.dark, size: 14.0),
+      headline3: AppTextStyle.bold(color: AppColors.dark, size: 24.0),
+      headline4: AppTextStyle.regular(color: AppColors.dark, size: 14.0),
+      subtitle1: AppTextStyle.getMediumStyle(color: AppColors.dark, size: 14.0),
+      subtitle2: AppTextStyle.getMediumStyle(color: AppColors.dark, size: 14.0),
+      bodyText1: AppTextStyle.regular(color: AppColors.dark),
       bodyText2: AppTextStyle.getMediumStyle(color: AppColors.dark),
-      caption: AppTextStyle.getRegularStyle(color: AppColors.dark),
+      caption: AppTextStyle.regular(color: AppColors.dark),
     ),
     // input decoration theme (text form field)
 
@@ -104,13 +98,12 @@ ThemeData getApplicationTheme() {
       fillColor: AppColors.lightGrey,
 
       // hint style
-      hintStyle: AppTextStyle.getRegularStyle(
-          color: AppColors.darkGrey, fontSize: 16.0),
+      hintStyle: AppTextStyle.regular(color: AppColors.darkGrey, size: 16.0),
 
       // label style
       labelStyle: AppTextStyle.getMediumStyle(color: AppColors.darkGrey),
       // error style
-      errorStyle: AppTextStyle.getRegularStyle(color: AppColors.orange),
+      errorStyle: AppTextStyle.regular(color: AppColors.orange),
 
       // enabled border
       enabledBorder: _outlineInputBorder(AppColors.border),

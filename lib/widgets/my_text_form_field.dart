@@ -32,9 +32,9 @@ class MyTextFormField extends StatelessWidget {
       obscureText: obscureText,
       textCapitalization: capitalization,
       validator: validator,
-      style: AppTextStyle.getRegularStyle(
+      style: AppTextStyle.regular(
         color: AppColors.dark,
-        fontSize: 16.0,
+        size: 16.0,
       ),
       decoration: InputDecoration(
         hintText: hint,

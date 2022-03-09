@@ -34,7 +34,6 @@ export 'package:foodly/widgets/cards/food_card_medium.dart';
 export 'package:foodly/widgets/food_image_page_view.dart';
 
 // Components
-export 'package:foodly/core/components/size_config.dart';
 export 'package:foodly/core/components/my_box_decoration.dart';
 export 'package:foodly/core/components/my_edge_insets.dart';
 export 'package:foodly/core/components/custom_navigator.dart';
@@ -53,6 +52,7 @@ export 'package:flutter_bloc/flutter_bloc.dart';
 export 'package:flutter_svg/flutter_svg.dart';
 export 'package:easy_localization/easy_localization.dart';
 export 'package:get_storage/get_storage.dart';
+export 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // Others
 export 'package:flutter/services.dart';
@@ -66,7 +66,6 @@ export 'package:foodly/models/profile_menu_table_model.dart';
 
 // Extensions
 export 'package:foodly/core/extensions/widget_extension.dart';
-export 'package:foodly/core/extensions/size_extension.dart';
 export 'package:foodly/core/extensions/image_extension.dart';
 
 

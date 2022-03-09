@@ -7,7 +7,6 @@ class AddingToOrdersPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       body: CustomScrollView(
         physics: BouncingScrollPhysics(),

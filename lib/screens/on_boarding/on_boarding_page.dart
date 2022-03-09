@@ -34,7 +34,6 @@ class _OnBoardingPageState extends State<OnBoardingPage>
   @override
   Widget build(BuildContext context) {
     CustomNavigator().init(context);
-    SizeConfig().init(context);
     return BlocProvider(
       create: (_) => OnBoardingCubit(),
       child: BlocBuilder<OnBoardingCubit, OnBoardingState>(
@@ -56,9 +55,9 @@ class _OnBoardingPageState extends State<OnBoardingPage>
             children: OnBoardingData.list.map((e) => _titles(e)).toList(),
           ),
           Positioned(
-            bottom: getHeight(80.0),
-            left: getWidth(20.0),
-            right: getWidth(20.0),
+            bottom: 80.h,
+            left: 20.w,
+            right: 20.w,
             child: Column(
               children: [
                 SvgPicture.asset(

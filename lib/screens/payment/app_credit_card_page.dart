@@ -14,8 +14,8 @@ class AddingCreditCardPage extends StatelessWidget {
         child: Column(
           children: [
             TitleSubtitle(
-              title: LocaleKeys.add_your_credit,
-              subtitle: LocaleKeys.dontHaveAccount,
+              title: LocaleKeys.add_your_credit.tr(),
+              subtitle: LocaleKeys.dontHaveAccount.tr(),
             ),
             MyTextFormField(
               controller: TextEditingController(),

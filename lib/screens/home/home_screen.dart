@@ -8,7 +8,6 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     CustomNavigator().init(context);
     return BlocProvider(
       create: (_) => HomePageCubit(),

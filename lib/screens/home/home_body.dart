@@ -10,10 +10,10 @@ class HomeBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
+      physics: const BouncingScrollPhysics(),
       padding: MyEdgeInsets.symmetric(v: 24.0),
       child: Column(
         children: [
-
           // Eng yuqoridagi taom rasmlari
           const PopularFoodsCard().sp(v: 0.0),
 

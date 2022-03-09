@@ -12,7 +12,6 @@ class WidgetTestPage extends StatefulWidget {
 class _WidgetTestPageState extends State<WidgetTestPage> {
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return Scaffold(
       body: Center(
         child: Padding(

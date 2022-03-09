@@ -26,14 +26,14 @@ class SocialMediaButton extends StatelessWidget {
           MySizedBox(width: 30.0),
           Text(
             label,
-            style: AppTextStyle.getButtonStyle(size: getWidth(12.0)),
+            style: AppTextStyle.getButtonStyle(size: 12.0),
           ),
         ],
       ),
       style: ElevatedButton.styleFrom(
         primary: color,
         padding: MyEdgeInsets.symmetric(h: 16.0, v: 8.0),
-        fixedSize: Size(MediaQuery.of(context).size.width, getHeight(44.0))
+        fixedSize: Size(MediaQuery.of(context).size.width, 44.h)
       ),
     );
   }

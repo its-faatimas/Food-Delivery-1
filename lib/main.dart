@@ -32,14 +32,20 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: LocaleKeys.appName.tr(),
-      debugShowCheckedModeBanner: false,
-      theme: getApplicationTheme(),
-      localizationsDelegates: context.localizationDelegates,
-      supportedLocales: context.supportedLocales,
-      locale: context.locale,
-      home: const SplashScreenPage(),
+    return ScreenUtilInit(
+      minTextAdapt: true,
+      splitScreenMode: true,
+      designSize: const Size(375, 812),
+      builder: () => MaterialApp(
+        title: LocaleKeys.appName.tr(),
+        debugShowCheckedModeBanner: false,
+        localizationsDelegates: context.localizationDelegates,
+        supportedLocales: context.supportedLocales,
+        locale: context.locale,
+        home: const HomePage(),
+
+        theme: getApplicationTheme(),
+      ),
     );
   }
 }

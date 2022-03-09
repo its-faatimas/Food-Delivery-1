@@ -7,7 +7,6 @@ class SignInPage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    SizeConfig().init(context);
     return BlocProvider(
       create: (_) => SignInCubit(),
       child: BlocBuilder<SignInCubit, SignInState>(
@@ -74,8 +73,8 @@ class SignInPage extends StatelessWidget {
 
                       Padding(
                         padding: MyEdgeInsets.symmetric(v: 24.0),
-                        child: MyText(
-                          LocaleKeys.or,
+                        child: Text(
+                          LocaleKeys.or.tr(),
                           style: MyTextStyle.regular(size: 16.0),
                         ),
                       ),

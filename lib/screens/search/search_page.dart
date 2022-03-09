@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/cubit/search_cubit/search_cubit.dart';
 
-
 class SearchPage extends StatelessWidget {
   const SearchPage({Key? key}) : super(key: key);
 
@@ -12,19 +11,9 @@ class SearchPage extends StatelessWidget {
       create: (_) => SearchCubit(),
       child: BlocBuilder<SearchCubit, SearchState>(
         builder: (ctx, state) {
-          return Container(
-            alignment: Alignment.center,
-            child: Text("Hello",
-
-            style: TextStyle(
-              fontSize: SizeConfig.safeBlockHorizontal * 12.0
-
-            ),),
-          );
+          return Container();
         },
       ),
     );
   }
 }
-
-

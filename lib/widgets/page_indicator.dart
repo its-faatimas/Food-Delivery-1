@@ -18,15 +18,15 @@ class PageIndicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      spacing: getWidth(8.0),
+      spacing: 8.w,
       children: List.generate(len, (index) => _setIndicator(index)),
     );
   }
 
   AnimatedContainer _setIndicator(int index) => AnimatedContainer(
         duration: const Duration(milliseconds: 300),
-        height: getHeight(5.0),
-        width: getWidth(8.0),
+        height: 5.h,
+        width: 8.w,
         decoration: MyDecoration.circular(
           color: currentIndex == index ? activeColor : inActiveColor,
         ),

@@ -4,13 +4,13 @@ import 'package:foodly/core/components/exporting_packages.dart';
 class MyEdgeInsets {
   static EdgeInsets symmetric({double h = 0.0, double v = 0.0}) =>
       EdgeInsets.symmetric(
-        horizontal: getWidth(h),
-        vertical: getHeight(v),
+        horizontal: h.w,
+        vertical: v.h,
       );
 
   static EdgeInsets all(double size) => EdgeInsets.symmetric(
-        horizontal: getWidth(size),
-        vertical: getHeight(size),
+        horizontal: size.w,
+        vertical: size.h,
       );
 
   static EdgeInsets only({
@@ -20,9 +20,9 @@ class MyEdgeInsets {
     double right = 0.0,
   }) =>
       EdgeInsets.only(
-        top: getHeight(top),
-        left: getHeight(left),
-        right: getHeight(right),
-        bottom: getHeight(bottom),
+        top: top.h,
+        left: left.w,
+        right: right.w,
+        bottom: bottom.h,
       );
 }

@@ -17,8 +17,8 @@ class MySizedBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return SizedBox(
       child: child,
-      height: height != null ? getHeight(height!) : null,
-      width: width != null ? getWidth(width!) : null,
+      height: height != null ? height!.h : null,
+      width: width != null ? width!.w : null,
     );
   }
 }
