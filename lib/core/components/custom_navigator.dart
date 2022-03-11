@@ -7,6 +7,8 @@ class CustomNavigator {
     _context = context;
   }
 
+  void pop() => Navigator.pop(_context);
+
   void push(Widget page) {
     Navigator.push(
       _context,

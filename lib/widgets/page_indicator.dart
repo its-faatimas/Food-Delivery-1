@@ -6,6 +6,7 @@ class PageIndicator extends StatelessWidget {
   final int currentIndex;
   Color activeColor;
   Color inActiveColor;
+  PageController? controller;
 
   PageIndicator({
     Key? key,
@@ -13,10 +14,12 @@ class PageIndicator extends StatelessWidget {
     required this.currentIndex,
     this.activeColor = AppColors.green,
     this.inActiveColor = AppColors.grey,
+    this.controller,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+
     return Wrap(
       spacing: 8.w,
       children: List.generate(len, (index) => _setIndicator(index)),

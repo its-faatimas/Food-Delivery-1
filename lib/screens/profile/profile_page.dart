@@ -52,7 +52,7 @@ class ProfilePage extends StatelessWidget {
           bottom: 24.0,
         ),
         child: TitleSubtitle(
-          title: LocaleKeys.accountSettings,
+          title: LocaleKeys.accountSettings.tr(),
           subtitle: LocaleKeys.updateYourSettings,
           centerTitle: false,
         ),

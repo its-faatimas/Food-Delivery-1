@@ -45,7 +45,7 @@ ThemeData getApplicationTheme() {
     outlinedButtonTheme: OutlinedButtonThemeData(
       style: OutlinedButton.styleFrom(
         fixedSize: Size(375.w, 48.h),
-        textStyle: AppTextStyle.getMediumStyle(color: AppColors.green),
+        textStyle: AppTextStyle.medium(color: AppColors.green),
         primary: AppColors.green,
         alignment: Alignment.center,
         side: BorderSide(color: AppColors.green, width: 1.w),
@@ -83,10 +83,10 @@ ThemeData getApplicationTheme() {
       headline2: AppTextStyle.regular(color: AppColors.dark, size: 14.0),
       headline3: AppTextStyle.bold(color: AppColors.dark, size: 24.0),
       headline4: AppTextStyle.regular(color: AppColors.dark, size: 14.0),
-      subtitle1: AppTextStyle.getMediumStyle(color: AppColors.dark, size: 14.0),
-      subtitle2: AppTextStyle.getMediumStyle(color: AppColors.dark, size: 14.0),
+      subtitle1: AppTextStyle.medium(color: AppColors.dark, size: 14.0),
+      subtitle2: AppTextStyle.medium(color: AppColors.dark, size: 14.0),
       bodyText1: AppTextStyle.regular(color: AppColors.dark),
-      bodyText2: AppTextStyle.getMediumStyle(color: AppColors.dark),
+      bodyText2: AppTextStyle.medium(color: AppColors.dark),
       caption: AppTextStyle.regular(color: AppColors.dark),
     ),
     // input decoration theme (text form field)
@@ -101,7 +101,7 @@ ThemeData getApplicationTheme() {
       hintStyle: AppTextStyle.regular(color: AppColors.darkGrey, size: 16.0),
 
       // label style
-      labelStyle: AppTextStyle.getMediumStyle(color: AppColors.darkGrey),
+      labelStyle: AppTextStyle.medium(color: AppColors.darkGrey),
       // error style
       errorStyle: AppTextStyle.regular(color: AppColors.orange),
 

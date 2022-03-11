@@ -23,7 +23,7 @@ class SocialMediaButton extends StatelessWidget {
       child: Row(
         children: [
           SvgPicture.asset(assetIcon),
-          MySizedBox(width: 30.0),
+          SizedBox(width: 30.w),
           Text(
             label,
             style: AppTextStyle.getButtonStyle(size: 12.0),
