@@ -27,8 +27,10 @@ class AddingToOrdersPage extends StatelessWidget {
                 const FoodTypeInfo(),
                 _showTopCookie(true),
                 _showTopCookie(false),
+                _showCount().sp(v: 34.0),
+                PrimaryButton(onPressed: () {}, label: 'Add to Order (\$11.98)')
               ],
-            ).sp(v: 24.0)
+            ).sp(v: 24.0),
           ],
         ),
       ),
@@ -56,23 +58,13 @@ class AddingToOrdersPage extends StatelessWidget {
           Column(
             children: FoodData.foodList
                 .map((e) => FoodRadioTile(
-                    value: e.name, groupValue: FoodData.foodList[0].name, onChanged: (v) {}))
+                    value: e.name,
+                    groupValue: FoodData.foodList[0].name,
+                    onChanged: (v) {}))
                 .toList(),
           )
         ],
       );
-
-  ListView _buildListView() {
-    return ListView.builder(
-        shrinkWrap: true,
-        physics: const NeverScrollableScrollPhysics(),
-        itemCount: FoodData.foodList.length,
-        itemBuilder: (ctx, i) {
-          FoodModel food = FoodData.foodList[i];
-          return FoodRadioTile(
-              value: food.name, groupValue: 'top', onChanged: (v) {});
-        });
-  }
 
   Row _setTitle(bool isTop) => Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -90,6 +82,30 @@ class AddingToOrdersPage extends StatelessWidget {
             ),
           ),
         ],
+      );
+
+  Row _showCount() => Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          _setCountButton(false),
+          Text('01', style: AppTextStyle.semiBold(size: 20.0)).sp(),
+          _setCountButton(true),
+        ],
+      );
+
+  SizedBox _setCountButton(bool isPlus) => SizedBox(
+        height: 54.h,
+        width: 54.w,
+        child: FloatingActionButton(
+          onPressed: () {},
+          // mini: true,
+          elevation: 0.0,
+          shape: RoundedRectangleBorder(
+              side: const BorderSide(color: AppColors.grey),
+              borderRadius: BorderRadius.circular(27.r)),
+          backgroundColor: AppColors.lightGrey,
+          child: SvgPicture.asset(isPlus ? AppIcons.plus : AppIcons.minus),
+        ),
       );
 
   final String _string =
