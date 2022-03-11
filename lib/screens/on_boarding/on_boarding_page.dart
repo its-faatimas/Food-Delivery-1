@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/on_boardin_data.dart';
 import 'package:foodly/cubit/onboarding/on_boarding_cubit.dart';
-import 'package:foodly/models/on_boarding_model.dart';
+import 'package:foodly/core/app_models/on_boarding_model.dart';
 import 'package:foodly/screens/auth/forgot_password_page.dart';
 
 class OnBoardingPage extends StatefulWidget {

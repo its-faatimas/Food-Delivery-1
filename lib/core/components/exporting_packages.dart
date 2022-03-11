@@ -62,7 +62,7 @@ export 'package:foodly/translations/locale_keys.g.dart';
 export 'package:foodly/core/components/text_form_field_validator.dart';
 
 // Models
-export 'package:foodly/models/profile_menu_table_model.dart';
+export 'package:foodly/core/app_models/profile_menu_table_model.dart';
 
 // Extensions
 export 'package:foodly/core/extensions/widget_extension.dart';

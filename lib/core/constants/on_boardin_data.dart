@@ -1,5 +1,5 @@
 import 'package:foodly/core/components/exporting_packages.dart';
-import 'package:foodly/models/on_boarding_model.dart';
+import 'package:foodly/core/app_models/on_boarding_model.dart';
 
 class OnBoardingData {
   static final List<OnBoardingModel> _data =[
