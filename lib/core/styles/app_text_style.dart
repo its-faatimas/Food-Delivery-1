@@ -52,7 +52,7 @@ class AppTextStyle {
 // medium text style
 
   static TextStyle medium(
-      {double size = 14.0, required Color color}) {
+      {double size = 14.0, Color color = AppColors.dark}) {
     return _getTextStyle(size.sp, FontWeight.w500, color);
   }
 

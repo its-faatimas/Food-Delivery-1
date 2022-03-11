@@ -5,9 +5,11 @@ class MyDecoration {
   static BoxDecoration circular({
     Color? color,
     double radius = 100.0,
+    Border? border,
   }) =>
       BoxDecoration(
         color: color,
+        border: border,
         borderRadius: BorderRadius.circular(radius.r),
       );
 

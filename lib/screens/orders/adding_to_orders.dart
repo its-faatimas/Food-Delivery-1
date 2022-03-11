@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
+import 'package:foodly/core/mock_data/food_data.dart';
 import 'package:foodly/core/styles/app_text_style.dart';
+import 'package:foodly/models/food_model.dart';
 import 'package:foodly/widgets/app_bars/add_to_order_app_bar.dart';
+import 'package:foodly/widgets/tiles/food_radio_tile.dart';
 
 class AddingToOrdersPage extends StatelessWidget {
   const AddingToOrdersPage({Key? key}) : super(key: key);
@@ -22,7 +25,8 @@ class AddingToOrdersPage extends StatelessWidget {
                   centerTitle: false,
                 ),
                 const FoodTypeInfo(),
-
+                _showTopCookie(true),
+                _showTopCookie(false),
               ],
             ).sp(v: 24.0)
           ],
@@ -44,6 +48,31 @@ class AddingToOrdersPage extends StatelessWidget {
           child: SvgPicture.asset(AppIcons.close, color: AppColors.white),
         ).onTap(() => CustomNavigator().pop()),
       );
+
+  _showTopCookie(bool isTop) => Column(
+        children: [
+          SizedBox(height: 34.h),
+          _setTitle(isTop),
+          Column(
+            children: FoodData.foodList
+                .map((e) => FoodRadioTile(
+                    value: e.name, groupValue: FoodData.foodList[0].name, onChanged: (v) {}))
+                .toList(),
+          )
+        ],
+      );
+
+  ListView _buildListView() {
+    return ListView.builder(
+        shrinkWrap: true,
+        physics: const NeverScrollableScrollPhysics(),
+        itemCount: FoodData.foodList.length,
+        itemBuilder: (ctx, i) {
+          FoodModel food = FoodData.foodList[i];
+          return FoodRadioTile(
+              value: food.name, groupValue: 'top', onChanged: (v) {});
+        });
+  }
 
   Row _setTitle(bool isTop) => Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
