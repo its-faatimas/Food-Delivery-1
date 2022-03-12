@@ -96,10 +96,10 @@ class RestaurantPage extends StatelessWidget {
       );
 
   Widget _showPopularFoods(String categoryName) => Column(
-    crossAxisAlignment: CrossAxisAlignment.start,
-    children: [
-      TitleText(title: categoryName).sp(v: 24.0),
-      ListView.separated(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          TitleText(title: categoryName).sp(v: 24.0),
+          ListView.separated(
             itemCount: 3,
             padding: MyEdgeInsets.symmetric(h: 20.0),
             shrinkWrap: true,
@@ -107,10 +107,9 @@ class RestaurantPage extends StatelessWidget {
             separatorBuilder: _separated,
             itemBuilder: (ctx, index) => const FoodTile(),
           ),
-    ],
-  );
+        ],
+      );
 
-  Widget _separated(ctx, index) {
-    return Divider(height: 40.h);
-  }
+  Divider _separated(ctx, index) => Divider(height: 40.h);
+
 }

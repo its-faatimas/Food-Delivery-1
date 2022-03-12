@@ -51,7 +51,7 @@ class FoodTile extends StatelessWidget {
         ],
       ),
     ).onTap(() {
-      CustomNavigator().push(AddingToOrdersPage());
+      CustomNavigator().push(const AddingToOrdersPage());
     });
   }
 

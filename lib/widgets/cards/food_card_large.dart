@@ -36,7 +36,7 @@ class FoodCardLarge extends StatelessWidget {
           // Restoran reytingi, yetkazib berish narxlari yoziladi
           Row(
             children: [
-              RatingInfo(),
+              const RatingInfo(),
               SizedBox(width: 13.w),
               _setTextIcon(AppIcons.clock, '25 Min'),
               Dot().sp(v: 0.0, h: 9.5),
@@ -44,10 +44,11 @@ class FoodCardLarge extends StatelessWidget {
             ],
           ),
         ],
+      ).onTap(
+        () => CustomNavigator().push(const RestaurantPage()),
+        radius: 16.0
       ),
-    ).onTap(() {
-      CustomNavigator().push(const RestaurantPage());
-    });
+    );
   }
 
   // Restoran menu'si haqida qisqacha ma'lumotlar tekstlari uchun

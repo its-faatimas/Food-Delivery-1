@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/mock_data/food_data.dart';
 import 'package:foodly/core/styles/app_text_style.dart';
-import 'package:foodly/models/food_model.dart';
-import 'package:foodly/widgets/app_bars/add_to_order_app_bar.dart';
 import 'package:foodly/widgets/tiles/food_radio_tile.dart';
 
 class AddingToOrdersPage extends StatelessWidget {
@@ -76,6 +74,9 @@ class AddingToOrdersPage extends StatelessWidget {
           Chip(
             padding: MyEdgeInsets.symmetric(h: 12.0, v: 6.0),
             backgroundColor: AppColors.orange.withOpacity(0.2),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.circular(4.r),
+            ),
             label: Text(
               'REQUIRED',
               style: AppTextStyle.medium(color: AppColors.orange),

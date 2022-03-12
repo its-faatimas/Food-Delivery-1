@@ -9,11 +9,8 @@ ThemeData getApplicationTheme() {
     primaryColor: AppColors.green,
     primaryColorLight: AppColors.grey,
     disabledColor: AppColors.grey,
-    // ripple color
-    splashColor: AppColors.green,
-
+    splashColor: AppColors.grey,
     canvasColor: AppColors.white,
-
     fontFamily: "SF-Pro",
 
     // CARD THEME
@@ -116,6 +113,8 @@ ThemeData getApplicationTheme() {
       // focused error border
       focusedErrorBorder: _outlineInputBorder(AppColors.border),
     ),
+
+
   );
 }
 
