@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 
-class MyBottomNavigationBar extends StatelessWidget {
+class AppBottomNavigationBar extends StatelessWidget {
   final ValueChanged<int> onTap;
   final int currentIndex;
 
-  const MyBottomNavigationBar({
+  const AppBottomNavigationBar({
     Key? key,
     required this.onTap,
     required this.currentIndex,

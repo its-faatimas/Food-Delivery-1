@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/styles/app_text_style.dart';
 
-class MyTextFormField extends StatelessWidget {
+class AppTextFormField extends StatelessWidget {
   final TextEditingController controller;
   final String hint;
   TextInputType inputType;
@@ -11,7 +11,7 @@ class MyTextFormField extends StatelessWidget {
   Widget? suffix;
   TextCapitalization capitalization;
   FormFieldValidator<String>? validator;
-  MyTextFormField({
+  AppTextFormField({
     Key? key,
     required this.controller,
     required this.hint,

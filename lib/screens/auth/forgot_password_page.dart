@@ -17,7 +17,7 @@ class ForgotPasswordPage extends StatelessWidget {
       widgets: [
         Form(
           key: _formKey,
-          child: MyTextFormField(
+          child: AppTextFormField(
             controller: _emailController,
             hint: LocaleKeys.email.tr(),
             inputType: TextInputType.emailAddress,

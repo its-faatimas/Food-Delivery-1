@@ -13,17 +13,17 @@ class ProfileSettingsPage extends StatelessWidget {
         child: Column(
           children: [
             MySizedBox(height: 24.0),
-            MyTextFormField(
+            AppTextFormField(
               controller: TextEditingController(text: 'Hello'),
               hint: LocaleKeys.name.tr().toUpperCase(),
             ),
             MySizedBox(height: 18.0),
-            MyTextFormField(
+            AppTextFormField(
               controller: TextEditingController(text: 'Hello'),
               hint: LocaleKeys.email_address.tr().toUpperCase(),
             ),
             MySizedBox(height: 18.0),
-            MyTextFormField(
+            AppTextFormField(
               controller: TextEditingController(text: '+998 93 123 45 78'),
               hint: LocaleKeys.password.tr().toUpperCase(),
             ),

@@ -23,7 +23,7 @@ class SignInPage extends StatelessWidget {
                   child: Column(
                     children: [
                       // Email Field
-                      MyTextFormField(
+                      AppTextFormField(
                         hint: LocaleKeys.email.tr(),
                         controller: cubit.emailController,
                         inputType: TextInputType.emailAddress,
@@ -33,7 +33,7 @@ class SignInPage extends StatelessWidget {
                       MySizedBox(height: 14.0),
 
                       // Password Field
-                      MyTextFormField(
+                      AppTextFormField(
                         hint: LocaleKeys.password.tr(),
                         controller: cubit.passwordController,
                         inputType: TextInputType.visiblePassword,

@@ -22,7 +22,7 @@ class SignUpPage extends StatelessWidget {
                   key: cubit.formKey,
                   child: Column(
                     children: [
-                      MyTextFormField(
+                      AppTextFormField(
                         inputType: TextInputType.name,
                         capitalization: TextCapitalization.words,
                         controller: cubit.fullNameController,
@@ -30,14 +30,14 @@ class SignUpPage extends StatelessWidget {
                         validator: FormValidator.general,
                       ),
                       MySizedBox(height: 14.0),
-                      MyTextFormField(
+                      AppTextFormField(
                         controller: cubit.emailController,
                         hint: LocaleKeys.email.tr(),
                         validator: FormValidator.email,
                         inputType: TextInputType.emailAddress,
                       ),
                       MySizedBox(height: 14.0),
-                      MyTextFormField(
+                      AppTextFormField(
                         controller: cubit.passwordController,
                         hint: LocaleKeys.password.tr(),
                         validator: FormValidator.password,

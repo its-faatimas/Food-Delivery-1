@@ -19,7 +19,7 @@ class _WidgetTestPageState extends State<WidgetTestPage> {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              MyTextFormField(
+              AppTextFormField(
                 hint: 'Email',
                 controller: TextEditingController(),
                 inputType: TextInputType.emailAddress,

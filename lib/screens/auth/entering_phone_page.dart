@@ -13,7 +13,7 @@ class EnteringPhonePage extends StatelessWidget {
       pageSubtitle: LocaleKeys.enter_email_to_reset,
       centerTitle: true,
       widgets: [
-        MyTextFormField(
+        AppTextFormField(
           controller: TextEditingController(),
           hint: '+998 93 188-13-33',
         ),

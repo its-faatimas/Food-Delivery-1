@@ -10,6 +10,7 @@ class FoodTile extends StatelessWidget {
     return Container(
       height: 110.h,
       width: 332.w,
+      margin: MyEdgeInsets.symmetric(v: 10.0),
       decoration: MyDecoration.circular(radius: 8.0, color: AppColors.white),
       child: Row(
         children: [
@@ -49,10 +50,10 @@ class FoodTile extends StatelessWidget {
             ),
           ),
         ],
-      ),
-    ).onTap(() {
-      CustomNavigator().push(const AddingToOrdersPage());
-    });
+      ).onTap(() {
+        CustomNavigator().push(const AddingToOrdersPage());
+      }),
+    );
   }
 
   Text _buildText({required String text, Color color = AppColors.darkGrey}) {

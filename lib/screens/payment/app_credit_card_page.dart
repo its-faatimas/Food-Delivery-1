@@ -17,7 +17,7 @@ class AddingCreditCardPage extends StatelessWidget {
               title: LocaleKeys.add_your_credit.tr(),
               subtitle: LocaleKeys.dontHaveAccount.tr(),
             ),
-            MyTextFormField(
+            AppTextFormField(
               controller: TextEditingController(),
               hint: 'XXXX XXXX XXXX XXXX',
               inputType: TextInputType.number,
@@ -26,7 +26,7 @@ class AddingCreditCardPage extends StatelessWidget {
             Row(
               children: [
                 Expanded(
-                  child: MyTextFormField(
+                  child: AppTextFormField(
                     controller: TextEditingController(),
                     hint: 'MM/YY',
                     inputType: TextInputType.number,
@@ -34,7 +34,7 @@ class AddingCreditCardPage extends StatelessWidget {
                 ),
                 MySizedBox(width: 16.0),
                 Expanded(
-                  child: MyTextFormField(
+                  child: AppTextFormField(
                     controller: TextEditingController(),
                     hint: 'CVC',
                     inputType: TextInputType.number,

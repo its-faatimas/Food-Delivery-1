@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/app_screens.dart';
 import 'package:foodly/cubit/profile_cubit/profile_cubit.dart';
-import 'package:foodly/widgets/my_switch_tile.dart';
+import 'package:foodly/widgets/tiles/my_switch_tile.dart';
 import 'package:foodly/widgets/tiles/profile_menu_tile.dart';
 
 class ProfilePage extends StatelessWidget {

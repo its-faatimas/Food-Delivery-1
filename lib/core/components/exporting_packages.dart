@@ -16,7 +16,7 @@ export 'package:foodly/widgets/app_bars/app_bar_with_drop_down.dart';
 export 'package:foodly/widgets/page_indicator.dart';
 export 'package:foodly/widgets/text/my_text.dart';
 export 'package:foodly/widgets/my_sized_box.dart';
-export 'package:foodly/widgets/my_text_form_field.dart';
+export 'package:foodly/widgets/app_text_form_field.dart';
 export 'package:foodly/widgets/food_type_info.dart';
 
 export 'package:foodly/widgets/buttons/my_icon_button.dart';
@@ -46,6 +46,8 @@ export 'package:foodly/core/constants/app_illustrations.dart';
 
 // Styles
 export 'package:foodly/widgets/text/my_text_style.dart';
+export 'package:foodly/core/styles/app_text_style.dart';
+
 
 // Packages
 export 'package:flutter_bloc/flutter_bloc.dart';

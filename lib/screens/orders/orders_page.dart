@@ -13,21 +13,46 @@ class OrdersPage extends StatelessWidget {
       child: BlocBuilder<OrdersCubit, OrdersState>(
         builder: (ctx, state) {
           OrdersCubit cubit = ctx.watch();
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              ListView(
-                padding: MyEdgeInsets.symmetric(h: 20.0),
-                shrinkWrap: true,
-                physics: const NeverScrollableScrollPhysics(),
-                children:  const [
-                  FoodTile(),
-                ],
-              )
-            ],
+          return SingleChildScrollView(
+            child: Column(
+              children: [
+                _setOrderList('Upcoming orders'),
+                SizedBox(height: 14.h),
+                _setOrderList('Past orders'),
+
+              ],
+            ),
           );
         },
       ),
     );
   }
+
+  Column _setOrderList(String type) {
+    return Column(
+          children: [
+            _setClearButton('Upcoming orders'),
+            ListView.builder(
+              padding: MyEdgeInsets.symmetric(h: 20.0),
+              shrinkWrap: true,
+              itemCount: 4,
+              physics: const NeverScrollableScrollPhysics(),
+              itemBuilder: (ctx, i) {
+                return const FoodTile();
+              },
+            )
+          ],
+        );
+  }
+
+  Padding _setClearButton(String title) => Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Text(
+            title.toUpperCase(),
+            style: AppTextStyle.medium(size: 16.0, color: AppColors.darkGrey),
+          ),
+          CustomTextButton(onPressed: () {}, label: 'CLEAR ALL')
+        ],
+      ).sp(v: 0.0);
 }
