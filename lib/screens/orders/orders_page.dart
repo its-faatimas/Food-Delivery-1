@@ -31,7 +31,7 @@ class OrdersPage extends StatelessWidget {
   Column _setOrderList(String type) {
     return Column(
           children: [
-            _setClearButton('Upcoming orders'),
+            _setClearButton(type),
             ListView.builder(
               padding: MyEdgeInsets.symmetric(h: 20.0),
               shrinkWrap: true,

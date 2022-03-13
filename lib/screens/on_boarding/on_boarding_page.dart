@@ -3,33 +3,9 @@ import 'package:foodly/core/components/exporting_packages.dart';
 import 'package:foodly/core/constants/on_boardin_data.dart';
 import 'package:foodly/cubit/onboarding/on_boarding_cubit.dart';
 import 'package:foodly/core/app_models/on_boarding_model.dart';
-import 'package:foodly/screens/auth/forgot_password_page.dart';
 
-class OnBoardingPage extends StatefulWidget {
+class OnBoardingPage extends StatelessWidget {
   const OnBoardingPage({Key? key}) : super(key: key);
-
-  @override
-  State<OnBoardingPage> createState() => _OnBoardingPageState();
-}
-
-class _OnBoardingPageState extends State<OnBoardingPage>
-    with TickerProviderStateMixin {
-  late AnimationController _animationController;
-
-  @override
-  void initState() {
-    super.initState();
-    _animationController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 300),
-      lowerBound: 0.0,
-      upperBound: 339.0,
-    );
-    _animationController.addListener(() {
-      setState(() {});
-    });
-    _animationController.forward();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -49,9 +25,17 @@ class _OnBoardingPageState extends State<OnBoardingPage>
     return Scaffold(
       body: Stack(
         children: [
+          Positioned(
+            top: 88.h,
+            left: 20.w,
+            right: 20.w,
+            child: SvgPicture.asset(
+              OnBoardingData.list[cubit.currentIndex].img,
+            ),
+          ),
           PageView(
+            physics: const BouncingScrollPhysics(),
             onPageChanged: cubit.onChanged,
-            // TODO AuthHeaderni o`zgartirish kerak
             children: OnBoardingData.list.map((e) => _titles(e)).toList(),
           ),
           Positioned(
@@ -60,10 +44,6 @@ class _OnBoardingPageState extends State<OnBoardingPage>
             right: 20.w,
             child: Column(
               children: [
-                SvgPicture.asset(
-                  OnBoardingData.list[cubit.currentIndex].img,
-                  height: _animationController.value,
-                ),
                 MySizedBox(height: 150.0),
                 PageIndicator(len: 3, currentIndex: cubit.currentIndex),
                 MySizedBox(height: 60.0),
@@ -79,17 +59,16 @@ class _OnBoardingPageState extends State<OnBoardingPage>
     );
   }
 
-  Column _titles(OnBoardingModel e) =>
-      Column(
+  Padding _titles(OnBoardingModel e) => Column(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           TitleSubtitle(title: e.title, subtitle: e.subtitle),
           MySizedBox(height: 199.0),
         ],
-      );
+      ).sp(v: 0.0, h: 32.0);
 
-  void _onButtonPressed() async{
+  void _onButtonPressed() async {
     await GetStorage().write('hasStarted', true);
-    navigatorPushReplacement(ForgotPasswordPage());
+    navigatorPushReplacement(const SignInPage());
   }
 }
